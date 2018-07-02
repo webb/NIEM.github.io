@@ -8,10 +8,9 @@
     - url: /training/iepd-developer/
 ---
 
-Information Exchange Package Documenations (IEPDs) are the core NIEM artifacts.
-They represent the context, content, semantics, and structure of a defined
-information exchange. An IEPD consists of a set of artifacts that together define
-and describe one or more implementable information exchanges.
+Information Exchange Package Documenation (IEPD) is a collection of NIEM artifacts.
+They define and describe the context, content, semantics, and structure of one or more implementable
+information exchanges.
 
 {:.features}
 >
@@ -26,6 +25,8 @@ and describe one or more implementable information exchanges.
 > artifacts including, but not limited to: Code Lists, Extension Schema Documents,
 > and Subset Schema Documents. IEPDs provide a self-contained definition for
 > derived information exchanges, thus they must be self documenting.
+
+![IEPD Content](assets/iepdcontent.png "IEPD Content")
 
 <!--more-->
 
