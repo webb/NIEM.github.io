@@ -34,6 +34,8 @@
 
 ## Tools for IEPD Developers
 
+See the [NIEM Tools Catalog](https://www.niem.gov/tools-catalog) for information about community and commercially-available tools.
+
 | Tool | IEPD Developer Uses |
 | ---- | ----------- |
 | **[SSGT](../../reference/tools/ssgt)** | Search and view the content of the model. <br> Build XML Schema subsets to use with your XML-based IEPD. |
