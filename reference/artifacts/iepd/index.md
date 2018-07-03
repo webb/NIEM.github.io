@@ -20,9 +20,10 @@ information exchanges.
 > - Provides example derived IEPs and documentation
 
 {:.note}
-> The rules for constructing IEPDs are defined by the Model Package Description
-> Specification (MPD-Spec). IEPDs are a kind of MPD composed from other NIEM
-> artifacts including, but not limited to: Code Lists, Extension Schema Documents,
+> The rules for constructing IEPDs are defined by the [Model Package Description
+> Specification (MPD-Spec)](https://reference.niem.gov/niem/specification/model-package-description/3.0.1).
+> IEPDs are a kind of MPD composed from other NIEM
+> artifacts including, but not limited to Code Lists, Extension Schema Documents,
 > and Subset Schema Documents. IEPDs provide a self-contained definition for
 > derived information exchanges, thus they must be self documenting.
 
@@ -35,6 +36,8 @@ information exchanges.
 An Information Exchange Package Documentation (IEPD) is a NIEM message specification. It is a set of artifacts that define and document a message, using applicable content from NIEM and custom content as needed. Extra work goes into creating an IEPD so that it contains all of the information needed by developers to implement it.
 
 To NIEM, the IEPD is considered the point of interoperability. Creation and management of IEPDs is the responsibility of their stakeholders and developers. As such, IEPDs have their own versioning processes, and are managed independently of NIEM and NIEM Domains. NIEM PMO defines IEPD conformance, but IEPD development and management fall outside its scope.
+
+![Data Interoperability](assets/interoperability.png "Data Interoperability")
 
 An IEPD contains a NIEM-conformant Schema Document Set (SET) that may include portions of NIEM Core and Domain Reference Schema Documents (REFs), and enterprise-specific or IEPD-specific Extension Schema Documents (EXTs). The schema documents contained in an IEPD work together to define one or more classes of instance documents that consistently encapsulate data for meaningful information exchanges. Any instance document that is valid for the SET, and that satisfies the conditions which define an IEP, is a member of a class of IEPs.
 
