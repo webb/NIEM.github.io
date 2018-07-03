@@ -5,7 +5,7 @@
   description: Description of Information Exchange Package Documentations.
   links:
     - url: /reference/artifacts/iepd/structure/
-    - url: /training/iepd-developer/
+    - url: /reference/artifacts/iepd/developer/
 ---
 
 Information Exchange Package Documenation (IEPD) is a collection of NIEM artifacts.
