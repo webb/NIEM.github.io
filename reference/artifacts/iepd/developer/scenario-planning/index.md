@@ -55,9 +55,11 @@ A use case diagram graphically represents the functionality of a particular info
 | **Relationship** | Depicts the relationships actors have with use cases and each other. |
 | **System** | Contains all functionality and limits scope of the diagram. |
 
-### Use Case Diagram Example
+### Use Case Diagram General Format
 
-![Traveler Processing System](usecasediagram.png "Traveler Processing System")
+Several of these simple diagrams can form a [more complex diagram](/training/iepd-developer/scenario-planning).
+
+![Use Case Diagram General Format](assets/usecasediagram02.png "Use Case Diagram General Format")
 
 ### Business Process Diagram Components
 
@@ -72,22 +74,18 @@ A business process diagram shows the graphical and sequential activities involve
 ### Business Process Diagram Development
 
 1. Determine the number of stakeholders involved in the process for the information exchange. Analyze the scenario and identify them.
-1. Create a box to serve as a frame to contain your diagram.
-1. Divide the box into horizontal rows ("swim lanes") for each of the stakeholders in the process.
-1. Draw a line dividing the header section to indicate each stakeholder from the section that will contain the stakeholder’s activities.
-1. Insert each of the stakeholders into the header section so that they have their own "swim lane" in the diagram.
-1. Create a starting node on the diagram in the far left of the swim lane for the stakeholder that initiates the process for the information exchange.
-1. Fill in the business process diagram from left to right, beginning after the starting node, with each of the activities or events, in chronological order, involved in the information exchange.  Also make sure to insert a terminal node that indicates the end of the process.
-1. Fill in the arrows that connect each of the activities in the diagram.
-1. Review the diagram to ensure that it matches the process described in the scenario.
+2. Create a box to serve as a frame to contain your diagram.
+3. Divide the box into horizontal rows ("swim lanes") for each of the stakeholders in the process.
+4. Draw a line dividing the header section to indicate each stakeholder from the section that will contain the stakeholder’s activities.
+5. Insert each of the stakeholders into the header section so that they have their own "swim lane" in the diagram.
+6. Create a starting node on the diagram in the far left of the swim lane for the stakeholder that initiates the process for the information exchange.
+7. Fill in the business process diagram from left to right, beginning after the starting node, with each of the activities or events, in chronological order, involved in the information exchange.  Also make sure to insert a terminal node that indicates the end of the process.
+8. Fill in the arrows that connect each of the activities in the diagram.
+9. Review the diagram to ensure that it matches the process described in the scenario.
 
-#### Business Process Diagram General Format
+### Business Process Diagram General Format
 
-![General Business Process Diagram](businessprocessdiagram01.png "General Business Process Diagram")
-
-### Business Process Diagram Example
-
-![Traveler Processing System](businessprocessdiagram02.png "Traveler Processing System")
+![General Business Process Diagram](assets/businessprocessdiagram01.png "General Business Process Diagram")
 
 ### Sequence Diagram Components
 
@@ -96,14 +94,9 @@ A sequence diagram shows how applications or systems operate with one another. I
 | **Applications** | Any application involved in sending messages within the information exchange. |
 | **Messages** | Any message being sent between applications within the information exchange. |
 
-### Sequence Diagram Example
+### Sequence Diagram General Format
 
-This sub-process of the traveler processing system has three interacting applications:
+![General Sequence Diagram](assets/sequencediagram02.png "General Sequence Diagram")
 
-- Airport Screening Application
-- Customs Application
-- Airport History Application
-
-![Traveler Processing System](sequencediagram.png "Traveler Processing System")
-
-When you have answers to the questions and complications discussed earlier, and one or more detailed diagrams, you can proceed to the next phase, [Analyze Requirements](../analyze-requirements/ "Analyze Requirements").
+When you have answers to the questions and complications discussed earlier, and one or more detailed diagrams, you can
+proceed to the next phase, [Analyze Requirements](/reference/artifacts/iepd/developer/analyze-requirements "Analyze Requirements").
