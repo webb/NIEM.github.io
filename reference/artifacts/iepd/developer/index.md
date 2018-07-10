@@ -20,6 +20,8 @@
 
 {{ page.description}}
 
+![IEPD Lifecycle](assets/iepdlifecycle01.png "IEPD Lifecycle")
+
 ## IEPD Lifecycle
 
 1. **[Scenario Planning](scenario-planning/ "Scenario Planning")**: During the Scenario Planning phase, you review background information related to your information exchange, assess resource impact, understand business context, and identify information exchange business scenarios.

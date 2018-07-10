@@ -1,14 +1,15 @@
 ---
 title: Analyze Requirements
+short: Analyze Requirements
 icon: fa-envelope-o
-description: The analyze requirements phase is the next step you take in IEPD development.  
+description: The analyze requirements phase is the next step in IEPD development.  
 ---
 
-{{ page.description}}
+{{ page.description }}
 
 {% include icon-list.html links=page.links %}
 
-You have graphically defined your scenario, and now you need to define your business rules and requirements, which define the exchange as well as the expectations of the exchange.
+You graphically defined your scenario. Now you need to define your business rules and requirements, which define the exchange as well as the expectations of the exchange.
 
 ## Business Rules
 
@@ -30,7 +31,7 @@ Follow a formal process to define and validate business requirements and accurat
 
 1. Initiate the requirements process.
 - Prepare and plan.
-- Perform analysis.
+- Perform an analysis.
 
 1. Define the exchange requirements.
 - Gather user requirements.
@@ -41,35 +42,4 @@ Follow a formal process to define and validate business requirements and accurat
 - Analyze requirements.
 - Verify and validate requirements.
 
-### Business Case Example
-
-The exchange goal is to acquire the information in an immigrating traveler's passport. Make a list of the types of data available and what you want to include in the exchange.
-
-### Create Effective Requirements
-
-Results can vary between individuals and groups. Examples of good requirements could be the following:
-
-#### Candidate Message Exchange Packages
-
-- Traveler requests entry to country.
-- Request from immigration to screening services for data on traveler.
-
-#### Performance Requirements
-
-Screening services returns data on traveler within seconds.
-
-#### Reporting Requirements
-
-Immigration receives daily reports on potential denials of entry.
-
-#### Data Quality Requirements
-
-The data that is processed should take into consideration the preceding requirements. For example, the data may consist of the following:
-
-| Parent Data Item | Child Data Items | Notes |
-| --- | --- | --- | --- |
-| Name | GivenName<br>MiddleName<br>FamilyName | Do we want more than one middle name?<br>Is the order of Family Name and Given Name important? |
-| Country of Origin |  | How many characters for country code? Determines the code list that may be used. |
-| Issuing Authority |  |  |
-| Birth Date | BirthCentury<br>BirthYear<br>BirthMonth<br>BirthDay | Order? Dd Mmmm Yyyy? |
-| Sex |  | Assume F or M? |
+Refer to the detailed [business case example](/training/iepd-developer/analyze-requirements) in Training.
