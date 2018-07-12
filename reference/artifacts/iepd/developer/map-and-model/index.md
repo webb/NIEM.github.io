@@ -26,11 +26,11 @@ The Mapping Document has the following characteristics:
 
 The following illustration shows the recommended structure of a mapping document.
 
-![Mapping Document Template](mapping.png "Mapping Document Template")
+![Mapping Document Template](assets/mapping.png "Mapping Document Template")
 
 ## Mapping Document Setup
 
-Create a blank, nine-column spreadsheet with the headings shown in the previous illustration (Source Container Type, Source Element, etc.). Alternatively you can start with the [sample mapping document we provide](../assets/SampleEmptyMappingDocument.xlsx).
+Create a blank, nine-column spreadsheet with the headings shown in the previous illustration (Source Container Type, Source Element, etc.). Alternatively you can start with the [sample mapping document we provide](assets/SampleEmptyMappingDocument.xlsx).
 
 In the following steps, identify (fill in) the **Source Data Columns**:
 
@@ -49,7 +49,7 @@ In the following steps, identify (fill in) the **Source Data Columns**:
 {:.example}
 >Four columns should be filled in for every element within the exchange content model.
 >
->![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
+>![Mapping Setup Example](assets/mappingsetup.png "Mapping Setup Example")
 
 ### NIEM Data Columns (B) and Mapping Column (C)
 
@@ -57,13 +57,13 @@ After you complete the entries in the Source Data Columns, identify the NIEM ele
 
 1. Use a NIEM tool (e.g., Schema Subset Generation Tool ([SSGT](/reference/tools/ssgt/)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string. In general, a "Property" search is a good place to start.
 
-1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, you found a possible match.<br>![Mapping Tool Example (SSGT)](ssgtexample.png "Mapping Tool Example (SSGT)")
+1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, you found a possible match.<br>![Mapping Tool Example (SSGT)](assets/ssgtexample.png "Mapping Tool Example (SSGT)")
 
-1. Enter the match in the mapping document under "NIEM Element." Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend, which is explained in the schema [build and validate](../build-and-validate/ "Build and Validate") process.<br>![Element](mappingelement.png "Element")
+1. Enter the match in the mapping document under "NIEM Element." Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend, which is explained in the schema [build and validate](../build-and-validate/ "Build and Validate") process.<br>![Element](assets/mappingelement.png "Element")
 
-1. Note the "type" associated with the NIEM element match and enter it under "NIEM Type."<br>![Element Type](mappingtype.png "Element Type")
+1. Note the "type" associated with the NIEM element match and enter it under "NIEM Type."<br>![Element Type](assets/mappingtype.png "Element Type")
 
-1. Open "details" next to the element for the "NIEM Element Definition." This is the standard definition for the NIEM element found in the element’s metadata. Copy that information to the column.<br>![Element Definition](mappingdefinition.png "Element Definition")
+1. Open "details" next to the element for the "NIEM Element Definition." This is the standard definition for the NIEM element found in the element’s metadata. Copy that information to the column.<br>![Element Definition](assets/mappingdefinition.png "Element Definition")
 
 1. Determine the **Mapping** value, which is the degree to which a source element maps to a NIEM element. This can be a personal judgment. The possible values are the following:<br>
 
@@ -81,15 +81,15 @@ After you complete the entries in the Source Data Columns, identify the NIEM ele
     >| Cargo Ship | Partial Match | nc:Vessel |
     >| Hazmat Indicator | No Match | nc:Vessel/local-ns:HazmatIndicator |
 
-    In this example, the match is equivalent (the best type of match). Enter "Equivalent" under "Mapping."<br>![Mapping Column](mappingcolumn.png "Mapping Column")
+    In this example, the match is equivalent (the best type of match). Enter "Equivalent" under "Mapping."<br>![Mapping Column](assets/mappingcolumn.png "Mapping Column")
 
-1. Click the expand button (next to **Add**) to open likely relationship trees until the terminal node is revealed.<br>![Expand the Tree](tree_expand.png "Expand the Tree")
+1. Click the expand button (next to **Add**) to open likely relationship trees until the terminal node is revealed.<br>![Expand the Tree](assets/tree_expand.png "Expand the Tree")
 
-1. Click the **Add** button next to the likely elements to begin the schema-creation process and to identify an element path.<br>![Expanded Tree](mappingpath.png "Expanded Tree")
+1. Click the **Add** button next to the likely elements to begin the schema-creation process and to identify an element path.<br>![Expanded Tree](assets/mappingpath.png "Expanded Tree")
 
-1. Note the **Types** and **Elements** areas are populated when the **Add** button is clicked.<br>![Types and Elements Added](mappingadditions.png "Types and Elements Added")
+1. Note the **Types** and **Elements** areas are populated when the **Add** button is clicked.<br>![Types and Elements Added](assets/mappingadditions.png "Types and Elements Added")
 
-1. The "NIEM Element Path" is the path of the NIEM element within the NIEM model.  Join the tree elements together to make the path and enter that in the column.<br>![Element Path](mappingfinal.png "Element Path")
+1. The "NIEM Element Path" is the path of the NIEM element within the NIEM model.  Join the tree elements together to make the path and enter that in the column.<br>![Element Path](assets/mappingfinal.png "Element Path")
 
 1. With the information you have now, you can begin the schema [build and validate](../build-and-validate/ "Build and Validate") process.
 
@@ -114,7 +114,7 @@ The hierarchical implications of the model must be considered when reusing NIEM 
 
 - Attributes are assigned to some types to provide context on their use.
 
-![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
+![Mapping Tool Example (SSGT)](assets/mappingreuse.png "Mapping Tool Example (SSGT)")
 
 ### Additional Considerations
 
