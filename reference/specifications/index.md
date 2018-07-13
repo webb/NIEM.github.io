@@ -5,14 +5,15 @@
   links:
   - url: /reference/specifications/code-lists/
   todo:
-  - NDR
-  - Conformance
-  - MPD
   - HLVA
+  - Conformance
   - CTAS
+  - NDR
+  - MPD
+  - Fix bug in function below that breaks imported URLs
+  deferred:
   - SIX
   - UML Profile
-  - Fix bug in function below that breaks imported URLs
 ---
 
 {{ page.description }}

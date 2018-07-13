@@ -1,6 +1,6 @@
 ---
-  title: Model Artifacts
-  short: Model Artifacts
+  title: Conformant Artifacts
+  short: Artifacts
   icon: fa-sitemap
   description: Learn about the kinds of files that make up NIEM releases and IEPDs.
   links:
@@ -22,7 +22,7 @@
     group: package
 ---
 
-The NIEM Model artifacts are the substantive components created to represent the exchange data model. Typically they are packaged into several collections of text, JSON, XML, and binary files.
+The NIEM Conformant Artifacts are the substantive components created to represent the exchange data model. Typically they are packaged into several collections of text, JSON, XML, and binary files.
 
 See a [one-page overview](overview) for excerpts of each of the major artifacts. You may also choose an item on this page for which you need more information
 
