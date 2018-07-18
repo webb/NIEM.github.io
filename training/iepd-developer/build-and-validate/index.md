@@ -27,9 +27,14 @@ The NIEM Tools catalog is a collection of different tools that aid in schema gen
 
 Look for an appropriate tool at the [NIEM Tools Catalog]({{ site.data.links.tools_catalog }} "NIEM Tools Catalog").
 
-### Create a Code List
+### Code List Artifact
 
-A code list is a tabular set of data. Each row is a "distinct entry" or set of code values. Each cell in the row has a value identified by its column header. The following table is an example of a code list for vehicle makes and models:
+A code list is a file that consists of comma-separated variable (csv), tabular data, which makes the list suitable for an IEPD schema:
+
+- Each row is a "distinct entry" or set of code values.
+- Each cell in the row has a value identified by its column header. 
+
+The following table is an example of a code list for vehicle makes and models:
 
 | ExampleTemplateCode | |
 | --- | --- | --- |
@@ -39,12 +44,10 @@ A code list is a tabular set of data. Each row is a "distinct entry" or set of c
 | HOND | Honda |
 | TOYT | Toyota |
 
-- The first row is the type name.
-- The second row is the code set definition.
-- The third row is the column labels.
+- The first row is the type name (ExampleTemplateCode).
+- The second row is the code set definition (Example Code List Definition).
+- The third row is the column labels (Code, Definition).
 - Subsequent rows are the codes and definitions.
-
-To make the list suitable for an IEPD schema, you need to enter the codes and definitions into a comma-separated variable (csv) file.
 
 ## Validate XML Schemas
 
@@ -58,7 +61,7 @@ Schemas must be validated to prove conformance. Validation is the process of tes
 
 Resolve errors with tools as far as they are capable; the remainder must be resolved manually.
 
-#### Conformance Validation Tool
+#### NIEM Conformance Tool
 
 The [NIEM Conformance Tool](https://tools.niem.gov/contesaNIEM/ "NIEM Conformance Tool"), based on the [Conformance Testing Assistant (ConTesA)](/reference/tools/contesa/  "Conformance Testing Assistant (ConTesA)"), is an available option to validate schema. This tool allows you to upload an IEPD, a set of schemas in a zip file, or an individual schema, and provides a summary report that lists the NDR rules that were checked with those that passed and those that failed. The NIEM Conformance Tool does not check all NDR rules as some rules are subject to interpretation and then must be manually checked.
 
@@ -68,7 +71,7 @@ The [NIEM Conformance Tool](https://tools.niem.gov/contesaNIEM/ "NIEM Conformanc
 
 #### Resolve Validation Errors
 
-The Conformance Validation Tool provides a summary report that lists the location of schema failures by line number and by XML object name. You should then do the following:
+The NIEM Conformance Tool provides a summary report that lists the location of schema failures by line number and by XML object name. You should then do the following:
 
 1. Resolve each validation error by reviewing the location of the error within the schema and the NDR rule(s) that was broken for that error.
 

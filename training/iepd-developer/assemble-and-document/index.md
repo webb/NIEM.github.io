@@ -1,7 +1,7 @@
 ---
 title: Assemble and Document
 icon: fa-envelope-o
-description: The assemble and document phase is the next step you take in IEPD development.  
+description: Assemble and Document is the next phase in IEPD development after the Build and Validate phase.
 ---
 
 {{ page.description}}
@@ -10,9 +10,9 @@ description: The assemble and document phase is the next step you take in IEPD d
 
 You have all your schemas and supporting documentation ready. Now you need to gather all of it in one electronic package.
 
-## Mandatory IEPD Artifacts
+## Mandatory Artifacts
 
-The following table lists the documents (artifacts) you must have in an IEPD. All of them must be NIEM-conformant.
+The following table lists the documents (artifacts) you must have for an IEP. All of them must be NIEM-conformant.
 
 | Artifact | Description |
 | --- | --- |
@@ -24,12 +24,12 @@ The following table lists the documents (artifacts) you must have in an IEPD. Al
 | Conformance Assertion | A Conformance Assertion is a document that declares the IEPD conforms to relevant NIEM specifications and associated rules. Although it increases the level of confidence that an IEPD was checked for NIEM conformance and quality, it does NOT constitute a guarantee or contract because it can be self-asserted.<br><br>Inclusion of a conformance assertion made by a reputable, independent, trusted entity (person or organization) can increase confidence in conformance, especially if it includes information such as a formal conformance test report or similar artifact. |
 | Sample Instance | A Sample Instance is an XML instance with real (or realistic) data that must be supplied for each conformance target. However, a sample can serve as an example for more than one target. If as many data components and validity constraints as possible are exercised, the sample helps an IEPD implementer to understand the original intent of the IEPD author. |
 
-### Readme
+### Readme Artifact
 
 As a starting point, logically organize the Readme document in chronological order of the development artifacts. Existing IEPD master documents can be used as a general guide. The Readme document can be a simple-text file and should not include XML code.
 
 {:.example}
->The following is a general table of contents.
+>The following is a recommended, general-purpose table of contents.
 >
 >1. Executive Summary
 >1. [Name] Information Exchange
@@ -46,7 +46,7 @@ As a starting point, logically organize the Readme document in chronological ord
 >       - List of IEPD Artifacts
 >       - IEPD Catalog
 
-### Change Log
+### Change Log Artifact
 
 The Change Log can be a simple-text file.
 
@@ -57,9 +57,9 @@ The Change Log can be a simple-text file.
 >| 1.1 | 4/16/03 | Added new elements to subset schema. | Bill |
 >| 2.0 | 5/9/18 | Updated requirements and constraint schema. | Sara |
 
-## Recommended IEPD Artifacts
+## Recommended Artifacts
 
-The following table lists artifacts that we recommend you include in an IEPD.  All of them must be NIEM-conformant.
+The following table lists artifacts that we recommend you include in an IEP.  All of them must be NIEM-conformant.
 
 | Artifact |  Description |
 | --- | --- |
@@ -71,33 +71,37 @@ The following table lists artifacts that we recommend you include in an IEPD.  A
 
 ## Assemble the IEPD
 
-Once all IEPD artifacts have been compiled, the next step is to properly name, file, and archive the final package.
+Once all the artifacts have been compiled, the next step is to properly name, file, and archive the final package.
 
 A standardized file structure promotes consistency and creates logical navigation through a large number of IEPD artifacts. Moreover, this consistency enables a greater degree of discovery and IEPD reuse because you can easily access information in a structured and uniform manner. Note that the catalog enables IEPD developers to locate artifacts in a directory and label them as specific IEPD artifacts no matter where they exist in the package.
 
 1. **Name** each artifact for your exchange with a consistent naming convention.
-1. **File** each artifact in a logical, consistent folder structure.
-1. **Archive** (e.g., zip) the file structure, including artifacts, into the final package.
+2. **File** each artifact in a logical, consistent folder structure.
+3. **Archive** (e.g., zip) the file structure, including artifacts, into the final package.
 
-The following example shows a recommended IEPD folder structure and file location. Note that the documentation produced by the [SSGT](/reference/tools/ssgt/) creates some of the structure for you.
+The following example shows a recommended IEPD folder structure and file location.
+
+{:.note}
+>The documentation produced by the [SSGT](/reference/tools/ssgt/) creates some of the structure for you.
 
 {:.example}
 >The root directory name should be meaningful and include the NIEM version and a revision number.
 >
 >my-iepd-4.0-rev-04
+>
 >- documentation (miscellaneous, binaries)
 >- iep-samples
 >- xsd
->    - wantlist.xml
->    - xml-catalog.xml
->  - extension
->  - niem
->    - appinfo/4.0
->    - conformanceTargets/4.0
->    - localTerminology/4.0
->    - niem-core/4.0
->    - proxy/xsd/4.0
->    - structures/4.0
+>   - wantlist.xml
+>   - xml-catalog.xml
+>- extension
+>- niem
+>   - appinfo/4.0
+>   - conformanceTargets/4.0
+>   - localTerminology/4.0
+>   - niem-core/4.0
+>   - proxy/xsd/4.0
+>   - structures/4.0
 >- schematron (if Schematron is used)
 >- changelog.txt (.md, .htm, .pdf; should be in root directory)
 >- conformance-assertion.txt (.md, .htm, .pdf; should be in root directory)
