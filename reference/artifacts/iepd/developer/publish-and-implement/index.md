@@ -12,7 +12,7 @@ The search, discovery, and reuse of IEPDs are necessary for effective informatio
 
 ## IEPD Repository
 
-Publish an IEPD to all repositories that are relevant to the exchange; the more exposure the better. Many of the [NIEM Communities](https://www.niem.gov/communities "NIEM Communities") have IEPD repositories where you can search for a package that is suitable or adaptable to your exchange. You may be able to find a home for your exchange with one of them.
+Publish an IEPD to all repositories that are relevant to the exchange; the more exposure the better. Many of the [NIEM Communities]({{ site.data.links.niem_communities }} "NIEM Communities") have IEPD repositories where you can search for a package that is suitable or adaptable to your exchange. You may be able to find a home for your exchange with one of them.
 
 ## IEPD Implementation
 
@@ -27,4 +27,4 @@ NIEM does not dictate how you handle security and privacy issues. You must use y
 
 You can tag data with security and privacy, however, other technologies are required upon exchange implementation to enforce security and privacy rules.
 
-You also may use metadata to describe specific requirements in regard to information security and the handling of sensitive privacy-protected information. The metadata allows systems that implement NIEM to automatically enforce rules that govern the use, protection, dissemination, and access controls for data being shared. An example of this is used by the Intelligence community, which established the Intelligence Community Information Security Marking (IC-ISM) as a standard for classified information. The NIEM technical architecture provides integration capabilities to leverage IC-ISM, as well as other IC security markups such as Need to Know (NTK). Leverage the [ISM IEPD](../../../iepd-starter-kit/iepd-series/) for an example on how to apply the IC-ISM markings.
+You also may [use metadata to describe specific requirements](/training/iepd-developer/publish-and-implement) in regard to information security and the handling of sensitive, privacy-protected information. The metadata allows systems that implement NIEM to automatically enforce rules that govern the use, protection, dissemination, and access controls for data being shared.
