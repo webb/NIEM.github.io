@@ -1,11 +1,11 @@
 ---
-  title: Information Exchange Package Documentation
-  short: IEPD
-  icon: fa-sitemap
-  description: Description of Information Exchange Package Documentations.
-  links:
-    - url: /reference/artifacts/iepd/structure/
-    - url: /reference/artifacts/iepd/developer/
+title: Information Exchange Package Documentation
+short: IEPD
+icon: fa-sitemap
+description: Description of Information Exchange Package Documentations.
+links:
+- url: /reference/artifacts/iepd/developer/
+- url: /reference/artifacts/iepd/structure/
 ---
 
 Information Exchange Package Documenation (IEPD) is a collection of NIEM artifacts.
@@ -21,7 +21,7 @@ information exchanges.
 
 {:.note}
 > The rules for constructing IEPDs are defined by the [Model Package Description
-> Specification (MPD-Spec)](https://reference.niem.gov/niem/specification/model-package-description/3.0.1).
+> Specification (MPD-Spec)]({{ site.data.links.mpd }}).
 > IEPDs are a kind of MPD composed from other NIEM
 > artifacts including, but not limited to Code Lists, Extension Schema Documents,
 > and Subset Schema Documents. IEPDs provide a self-contained definition for

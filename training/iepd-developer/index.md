@@ -58,7 +58,7 @@ See the [NIEM Tools Catalog](https://www.niem.gov/tools-catalog) for information
 | Specification | IEPD Developer Uses |
 | ------------- | ----------- |
 | NDR | Information about the NIEM **[Naming and Design Rules specification]({{ site.data.links.ndr }})** is coming soon. |
-| MPD | Information about the **[Model Package Description specification]({{ site.data.links.mpd }})**, which provides rules and guidance for developing IEPDs, is coming soon. |
+| MPD | Information about the **[Model Package Description]({{ site.data.links.mpd }})** specification, which provides rules and guidance for developing IEPDs, is coming soon. |
 | **[Code Lists](../../reference/specifications/code-lists)** | Want to use CSV files to define your IEPD codes instead of XML enumerations? <br> Want to link codes to other codes (like vehicle makes and models) or multiple definitions? <br> Want to use GENC codes from the release?  <br>Learn how NIEM uses CSV files to represent enhanced code lists. |
 | Conformance | Information about the **[Conformance specification]({{ site.data.links.conformance }})** is coming soon. |
 | Conformance Targets Attribute | Learn how to declare conformance targets for your extension schemas. <br> This is most often used to specify that your IEPD schemas intend to follow a particular version and rule set of the NDR (e.g., NDR version 4.0, extension schema rules). <br> Information about the **[Conformance Targets Attribute specification]({{ site.data.links.ctas }})** is coming soon. |

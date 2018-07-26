@@ -5,7 +5,7 @@
   description: IEPD Structure
 ---
 
-An Information Exchange Package Documentation (IEPD) is a set of NIEM artifacts whose principal content is schema documents, the purpose for which is to define and declare reusable data components for information exchanges or to define the exchanges themselves. They are a NIEM artifact defined by the Model Package
+Information Exchange Package Documentation (IEPD) is a set of NIEM artifacts whose principal content is schema documents, the purpose for which is to define and declare reusable data components for information exchanges or to define the exchanges themselves. They are a NIEM artifact defined by the Model Package
 Description Specification (MPD-Spec) and are a kind of Model Package Description (MPD).
 
 IEPDs require a self-documenting MPD Catalog artifact containing metadata and a listing of the IEPD's key artifacts. The MPD Catalog establishes identification metadata, conformance targets, purpose, general content, lineage, and other metadata. Metadata includes:
