@@ -10,6 +10,7 @@
     - url: /reference/releases/
     - url: /reference/tools/
     - url: /reference/specifications/
+    - url: /reference/terminology/
 ---
 
 NIEM is a data model that defines many reusable components and rules for building local extensions.  The purpose for this is to be able to create information exchanges with clear semantics and a higher degree of consistency across the community.
