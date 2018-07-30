@@ -2,10 +2,11 @@
 title: Information Exchange Package Documentation
 short: IEPD
 icon: fa-sitemap
-description: Description of Information Exchange Package Documentations.
+description: Description of Information Exchange Package Documentation (IEPD).
 links:
-- url: /reference/artifacts/iepd/developer/
-- url: /reference/artifacts/iepd/structure/
+- url: /reference/iepd/developer/
+- url: /reference/iepd/structure/
+- url: /reference/iepd/iepd-versions/
 ---
 
 Information Exchange Package Documenation (IEPD) is a collection of NIEM artifacts.

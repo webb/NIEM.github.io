@@ -13,7 +13,7 @@ links:
 - url: /reference/domain-modeling-guide/
 - url: /reference/normative-rules/
 - url: /reference/core-supplement/
-- url: /reference/iepd-versions/
+- url: /reference/iepd/
 - url: /reference/ref-vs-ext/
 ---
 
