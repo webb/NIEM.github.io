@@ -4,7 +4,7 @@ short: IEPD
 icon: fa-sitemap
 description: Description of Information Exchange Package Documentation (IEPD).
 links:
-- url: /reference/iepd/developer/
+- url: /reference/iepd/lifecycle/
 - url: /reference/iepd/structure/
 - url: /reference/iepd/iepd-versions/
 ---

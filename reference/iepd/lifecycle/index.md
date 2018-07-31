@@ -4,12 +4,12 @@ short: Lifecycle
 icon: fa-envelope-o
 description: An Information Exchange Package Documentation (IEPD) developer designs, builds, and validates the components (artifacts) of an Information Exchange Package(IEP). The process consists of a six-phase lifecycle.
 links:
-- url: /reference/artifacts/iepd/developer/scenario-planning/
-- url: /reference/artifacts/iepd/developer/analyze-requirements/
-- url: /reference/artifacts/iepd/developer/map-and-model/
-- url: /reference/artifacts/iepd/developer/build-and-validate/
-- url: /reference/artifacts/iepd/developer/assemble-and-document/
-- url: /reference/artifacts/iepd/developer/publish-and-implement/
+- url: /reference/iepd/lifecycle/scenario-planning/
+- url: /reference/iepd/lifecycle/analyze-requirements/
+- url: /reference/iepd/lifecycle/map-and-model/
+- url: /reference/iepd/lifecycle/build-and-validate/
+- url: /reference/iepd/lifecycle/assemble-and-document/
+- url: /reference/iepd/lifecycle/publish-and-implement/
 resources:
 - url: /reference/
 - url: /iepd-starter-kit/
