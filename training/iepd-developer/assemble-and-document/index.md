@@ -94,7 +94,7 @@ You should perform a peer review of your IEPD. This has several benefits:
 
 A good way to review an IEPD is to compare it to a checklist. The checklist should include the following:
 
-- The readme document contains documentation necessary to effectively describe the information exchange.
+- The readme document contains documentation necessary to effectively describe the information exchange.
 - The exchange content model file is included and accurately represents the XML code in the schemas.
 - The XML catalog validates with the NIEM Model Package Description (MPD) catalog schema (XSD) and resides in the root directory of the MPD bearing the file name “mpd-catalog.xml.”
 - The change log is in the root directory of the IEPD, begins with the substring “changelog,” and records changes to previous IEPD schemas that are represented.

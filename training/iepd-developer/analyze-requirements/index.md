@@ -17,8 +17,8 @@ Currently, the only means a city has to process school meal program applications
 The city government identifies the need to create a series of information exchanges:
 
 - Exchanges that allow resident parents to apply online for their children’s school meals program.
-- Exchanges that automate the processing of the parent's request between the Human Services Agency and the school.
-- Exchanges that implement a web-based service that, upon submission, automatically checks the city’s Human Services Agency database to ensure the applicant is from a low-income family and qualifies for the school meals program. If qualified, the web-based service notifies the respective school to add the child to the meal program.
+- Exchanges that automate the processing of the parent's request between the Human Services Agency and the school.
+- Exchanges that implement a web-based service that, upon submission, automatically checks the city’s Human Services Agency database to ensure the applicant is from a low-income family and qualifies for the school meals program. If qualified, the web-based service notifies the respective school to add the child to the meal program.
 
 Your scenario diagram may look like this:
 
@@ -37,12 +37,12 @@ Results can vary between individuals and groups. Examples of good requirements c
 
 ### Performance Requirements
 
-- The web-based service notifies parents via email whether or not their child qualifies for the school meals program ten minutes after receiving their application.
+- The web-based service notifies parents via email whether or not their child qualifies for the school meals program ten minutes after receiving their application.
 - A school receives notification within 24 hours of a new qualified child within their school.
 
 ### Reporting Requirements
 
-Each school in the city receives a monthly report of every child in their school who is currently enrolled in the school meals program.
+Each school in the city receives a monthly report of every child in their school who is currently enrolled in the school meals program.
 
 ### Data Quality Requirements
 
