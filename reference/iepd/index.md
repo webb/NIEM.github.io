@@ -6,6 +6,7 @@ description: Description of Information Exchange Package Documentation (IEPD).
 links:
 - url: /reference/iepd/lifecycle/
 - url: /reference/iepd/structure/
+- url: /iepd-starter-kit/
 - url: /reference/iepd/iepd-versions/
 ---
 

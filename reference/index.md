@@ -1,8 +1,9 @@
 ---
 title: Reference
 layout: 'landing_page'
-description: Learn more about NIEM, including the model, IEPDs, tools, specifications.
+description: Learn more about NIEM, including the model, IEPDs, tools, and specifications.
 links:
+- url: /reference/iepd/
 - url: /reference/conformance/
 - url: /reference/artifacts/
 - url: /reference/concepts/
@@ -13,7 +14,6 @@ links:
 - url: /reference/domain-modeling-guide/
 - url: /reference/normative-rules/
 - url: /reference/core-supplement/
-- url: /reference/iepd/
 - url: /reference/ref-vs-ext/
 ---
 
