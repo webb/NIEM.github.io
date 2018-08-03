@@ -16,7 +16,7 @@
     group: special
   - url: /reference/artifacts/schema-document-set/
     group: special
-  - url: /reference/artifacts/iepd/
+  - url: /reference/iepd/
     group: package
   - url: /reference/artifacts/iep/
     group: package

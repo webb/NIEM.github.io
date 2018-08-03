@@ -91,7 +91,7 @@ After you complete the entries in the Source Data Columns, identify the NIEM ele
 
 1. The **NIEM Element Path** is the path of the NIEM element within the NIEM model.  Join the tree elements together to make the path and enter that in the column.<br>![Element Path](assets/mappingfinal.png "Element Path")
 
-1. With the information you have now, you can begin the schema [build and validate](/reference/artifacts/iepd/developer/build-and-validate "Build and Validate") process.
+2. With the information you have now, you can begin the schema [build and validate](/reference/iepd/lifecycle/build-and-validate "Build and Validate") process.
 
 ### Model Searching Tips
 

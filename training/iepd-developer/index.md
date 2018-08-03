@@ -1,14 +1,14 @@
 ---
-  title: IEPD Developer
-  icon: fa-envelope-o
-  description: An Information Exchange Package Documentation (IEPD) Developer designs, builds, and validates the components (artifacts) of an Information Exchange Package (IEP). The process consists of a six-phase lifecycle.
-  links:
-  - url: /training/iepd-developer/scenario-planning/
-  - url: /training/iepd-developer/analyze-requirements/
-  - url: /training/iepd-developer/map-and-model/
-  - url: /training/iepd-developer/build-and-validate/
-  - url: /training/iepd-developer/assemble-and-document/
-  - url: /training/iepd-developer/publish-and-implement/
+title: IEPD Developer
+icon: fa-envelope-o
+description: An Information Exchange Package Documentation (IEPD) Developer designs, builds and validates the components (artifacts) of an Information Exchange Package (IEP). Theprocess consists of a six-phase lifecycle.
+links:
+- url: /training/iepd-developer/scenario-planning/
+- url: /training/iepd-developer/analyze-requirements/
+- url: /training/iepd-developer/map-and-model/
+- url: /training/iepd-developer/build-and-validate/
+- url: /training/iepd-developer/assemble-and-document/
+- url: /training/iepd-developer/publish-and-implement/
 ---
 
 {{ page.description}}
@@ -22,8 +22,10 @@
 5. **[Assemble and Document](assemble-and-document/ "Assemble and Document")**: During the Assemble and Document Phase, you prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file. You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
 6. **[Publish and Implement](publish-and-implement/ "Publish and Implement")**: During the last phase, the Publish and Implement phase, you implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
 
-## Resources for IEPD Developers
+## IEPD Developer Resources
 
-[Reference](/reference/) has a comprehensive list of information resources for tools, specifications, and artifacts.
+[Reference](/reference/) has a comprehensive list of information resources for tools, specifications, and artifacts. In addition, there are some [older resources](https://www.niem.gov/techhub/iepd-resources) you can use for reference purposes.
 
-In addition, there are some [older resources](https://www.niem.gov/techhub/iepd-resources) you can use for reference purposes.
+## IEPD Tutorial
+
+- [Simple IEPD](/training/iepd-developer/simple-iepd-tutorial)
