@@ -32,19 +32,22 @@ The following illustration shows the recommended structure of a mapping document
 
 Create a blank, nine-column spreadsheet with the headings shown in the previous illustration (Source Container Type, Source Element, etc.). Alternatively you can start with the [sample mapping document we provide](assets/SampleEmptyMappingDocument.xlsx).
 
+{:.note}
+>The sample mapping document does not have a way to capture any issues or problems you many encounter. You can add an additional "Notes" column to document problems.
+
 In the following steps, identify (fill in) the **Source Data Columns**:
 
 ### Source Data Columns (A)
 
 1. Identify a data object within the exisiting exchange content model. This is the **Source Container Type**, which is the data source high-level object, class, or context of a set of data elements (e.g., person, vehicle, arrest) to which they belong.
 
-1. Identify an element within that object. This is the **Source Element**, which is a specific data element that is associated with the Source Container Type.
+2. Identify an element within that object. This is the **Source Element**, which is a specific data element that is associated with the Source Container Type.
 
-1. Identify the data type for the element. This is the **Source Data Type**, which is the data type (e.g., date, string) of the source element.
+3. Identify the data type for the element. This is the **Source Data Type**, which is the data type (e.g., date, string) of the source element.
 
-1. Provide a definition for the element. This is the **Source Element Definition**, which can be as descriptive as you want it to be.
+4. Provide a definition for the element. This is the **Source Element Definition**, which can be as descriptive as you want it to be.
 
-1. Repeat the previous steps for each object in the Exchange Content Model.
+5. Repeat the previous steps for each object in the Exchange Content Model.
 
 {:.example}
 >Four columns should be filled in for every element within the exchange content model.
