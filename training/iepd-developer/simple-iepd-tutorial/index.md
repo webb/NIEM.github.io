@@ -22,22 +22,50 @@ Dropbox (GaTech)/NIEM-FA807514D0018-0018/training/2010-05-18-walmsley-creating-a
 
 You talk to personal and professional associates and decide the information should be distributed so that others may learn, or be able to add to the group's knowledge, about the superhero.
 
-Determine the information that would be useful to gather and the resources needed to obtain and distribute the information. You decide that acquiring and distributing the person's name and appearance is enough. Develop a [Use Case, Business Process, or Sequence](/training/iepd-developer/scenario-planning/) diagram to graphically show the actors and information flow for your scenario. 
+Determine the information that would be useful to gather and the resources needed to obtain and distribute the information. You decide that acquiring and distributing the person's name and appearance is enough. Develop a [Use Case, Business Process, or Sequence](/training/iepd-developer/scenario-planning/) diagram to graphically show the actors and information flow for your scenario. A visual representation can be very useful especially if the scenarion is complex.
 
 The NIEM data model is very large. It is highly likely that the type and format of the data you want to acquire and distribute is already defined. If not, then one of the several [NIEM Communities]({{ site.data.links.niem_communities }} "NIEM Communities") may have tackled a similar problem and developed an information exchange pacakage (IEP) that comes close to meeting your needs. A search through their published resources can help.
 
 {:.example}
+>Scenario Information Acquisition and Flow
 >
+>1. Witness sees Superhero display powers
+>1. Witness obtains Superhero name
+>1. Witness transmits information to Police
+>1. Police transmit Superhero information to other Authorities
 
 ### Analyze Requirements
 
+The information exchange scenario now needs to be broken down into finer detail to understand and document the business context and data requirements. There is no prescribed way to to do this, nor is the knowledge of NIEM or XML Schema required. The most important idea to keep in mind is that the subject matter experts capture the requirements and analysis with thorough detail.
+
+The first item you need to determine is the single, main, focal point or purpose for the exchange. This is technically known as the root element. For this simple IEPD, that is the superhero.
+
+{:.example}
+> root element = `Person`. Assume the superhero is a human person.
+
+The content portion of the requirements analysis can be done however you prefer: document, spreadsheet, or UML diagram.  The kinds of information to be captured here include the following:
+
+- Data elements – These are the data fields for the message.  For each field, the following information may or will be needed:
+  - Element name – This is the name of the field or tag.  Examples include First Name, Last Name, Street Address, and Phone Number.
+  - Data type – The structural representation or format of the element. Examples include string, date, integer, decimal, boolean, state code set, person data type, location data type.
+  - Definition – Descriptive definitions will be required for all components in the exchange. At this stage, the semantics need to be captured, but the wording does not have to be finalized or perfected. If you determine later that an element maps to NIEM, then the NIEM element will come with its own definition. The definition captured here should be sufficient enough so that the meaning is clear.
+  - Occurrence constraints – The minimum and maximum number of times an element may appear in the instance. For example, Last Name may occur once only; SSN may occur 0 to 1 times; Phone Number may occur 0 to many times.
+
+    Default occurrence constraints in NIEM are 0 to unbounded (with a few exceptions); the default in XML Schema is once only.  Without explicitly setting these occurrence constraints, the defaults mean that components reused from NIEM will be optional and the ones added locally will be required.
+  - Source information – Optional. It may be useful or necessary in some cases to record the source of the requirement. Traceability information may seem very apparent at the time but can be difficult to reconstruct at a later date if needed.
+
+{:.note}
+>If a corresponding NIEM element is already known at this stage, then the NIEM values may be used in place of local ones for element name, data type, and definition.
+
+- Objects and classes – These are the complex, reusable data structures where related elements are grouped together.  Examples include Person (with elements First Name, Last Name, SSN, and Phone) and Location (with elements Street Address, City, State, and Zip Code).
+- Code sets – This is a list of allowable values, such as a state code list or an eye color list.  Code sets may come from a standard or may be custom-defined.
+- Conditions and business rules – There may be certain restrictions on the content that need to be represented.  Examples include restrictions on individual values (such as a number that cannot be less than zero or a string that must have a certain number of characters) and conditional restraints (such as if the SSN is not provided, then Last Name and Birth Date are required), etc.
+
+The other requirements of the exchange – technical, security and privacy, performance, reporting, etc. – should be described in this stage as well.
+
+### Map and Model
 
 <!--
-
-### Analyze Requirements
-
-The selected information exchange scenario is further elaborated to understand and document the business context and data requirements.
-
 ### Map and Model
 
 You begin the creation of IEPD components for your exchange content model based on your information exchange requirements.  You start with the mapping document, which matches your exchange data elements to the NIEM data model.
