@@ -84,14 +84,13 @@ The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset
 
 We have enough information from the preceding example, to begin [filling in a mapping document](/training/iepd-developer/map-and-model/). Make certain you have recorded your SSGT searches so you can begin to fill in the spreadsheet.
 
-![Mapping Document Template](assets/mapping.png "Mapping Document Template")
-
 **Source Data Columns**
 
 - Source Container Type - person, name
 - Source Element - Person, Name
 - Source Data Type - string
 - Source Element Definition - a superhero who is also a human being
+- Source Element Cardinality - one person, one name
 
 **NIEM Data Columns**
 
@@ -99,10 +98,15 @@ We have enough information from the preceding example, to begin [filling in a ma
 - NIEM Element Path - nc:Person/nc:PersonName/nc:PersonFullName/nc:personNameInitialIndicator
 - NIEM Type - nc:PersonType, nc:PersonNameType, nc:PersonNameTextType
 - NIEM Element Definition - A human being
+- NIEM Element Cardinality - 1:1 (at least one name, but no more than one name)
 
 **Mapping Column**
 
 - Mapping - Equivalent
+
+### Knowledge Check ###
+
+Answer a few questions in a [short quiz](map-model-knowledge-check.html).
 
 ---
 
