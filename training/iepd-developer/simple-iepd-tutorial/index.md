@@ -104,9 +104,9 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 - Mapping - Equivalent
 
-### Knowledge Check ###
+### Knowledge Check
 
-Answer a few questions in a [short quiz](map-model-knowledge-check.html).
+Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz).
 
 ---
 
