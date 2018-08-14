@@ -6,11 +6,11 @@ description: This tutorial shows you how to create a very simple IEPD. Once you 
 
 {{ page.description}}
 
-### In the Beginning
+## In the Beginning
 
 You observe a person who displays superhuman powers (a superhero). You want to inform others of this person's presence and unique characteristics.
 
-### Scenario Planning
+## Scenario Planning
 
 <!--
 You review background information related to your information exchange, assess resource impact, understand business context, and identify information exchange business scenarios.
@@ -34,9 +34,13 @@ The NIEM data model is very large. It is highly likely that the type and format 
 >1. Witness transmits information to Police
 >1. Police transmit Superhero information to other Authorities
 
+### Scenario Planning Knowledge Check
+
+Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-01).
+
 ---
 
-### Analyze Requirements
+## Analyze Requirements
 
 The information exchange scenario now needs to be broken down into finer detail to understand and document the business context and data requirements. There is no prescribed way to to do this, nor is the knowledge of NIEM or XML Schema required. The most important idea to keep in mind is that the subject matter experts capture the requirements and analysis with thorough detail.
 
@@ -63,11 +67,15 @@ The content portion of the requirements analysis can be done however you prefer:
 - Code sets – This is a list of allowable values, such as a state code list or an eye color list.  Code sets may come from a standard or may be custom-defined.
 - Conditions and business rules – There may be certain restrictions on the content that need to be represented.  Examples include restrictions on individual values (such as a number that cannot be less than zero or a string that must have a certain number of characters) and conditional restraints (such as if the SSN is not provided, then Last Name and Birth Date are required), etc.
 
-The other requirements of the exchange – technical, security and privacy, performance, reporting, etc. – should be described in this stage as well.
+The other requirements of the exchange (e.g., technical, security and privacy, performance, reporting) should be described in this stage as well.
+
+### Analyze Requirements Knowledge Check
+
+Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-02).
 
 ---
 
-### Map and Model Requirements
+## Map and Model Requirements
 
 You begin the creation of IEPD components for your exchange content model based on your information exchange requirements analysis.  A common way to start is to create a mapping document. This is typically a spreadsheet, which maps your local exchange data elements to the NIEM data model. You can [download a sample spreadsheet](/training/iepd-developer/map-and-model/assets/SampleEmptyMappingDocument.xlsx "Sample Mapping Document") and modify it to suit your requirements.
 
@@ -104,9 +112,9 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 - Mapping - Equivalent
 
-### Knowledge Check
+### Map and Model Knowledge Check
 
-Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz).
+Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-03).
 
 ---
 
