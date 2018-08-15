@@ -34,10 +34,8 @@ The NIEM data model is very large. It is highly likely that the type and format 
 >1. Witness transmits information to Police
 >1. Police transmit Superhero information to other Authorities
 
-
 {:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-01).
-
+> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-1).
 <a name="quiz-1-return"/>
 
 ---
@@ -71,11 +69,8 @@ The content portion of the requirements analysis can be done however you prefer:
 
 The other requirements of the exchange (e.g., technical, security and privacy, performance, reporting) should be described in this stage as well.
 
-- This is a single-thing list
-
 {:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-02).
-
+> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-2).
 <a name="quiz-2-return"/>
 
 ---
@@ -118,8 +113,7 @@ We have enough information from the preceding example, to begin [filling in a ma
 - Mapping - Equivalent
 
 {:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-03).
-
+> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-3).
 <a name="quiz-3-return"/>
 
 ---
