@@ -9,6 +9,7 @@ links:
 - url: /training/iepd-developer/build-and-validate/
 - url: /training/iepd-developer/assemble-and-document/
 - url: /training/iepd-developer/publish-and-implement/
+- url: /training/iepd-developer/simple-iepd-tutorial/
 ---
 
 {{ page.description}}

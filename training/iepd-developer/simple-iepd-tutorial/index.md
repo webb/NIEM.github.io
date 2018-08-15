@@ -1,7 +1,8 @@
 ---
 title: Simple IEPD Tutorial
+short: Simple IEPD Tutorial
 icon: fa-envelope-o
-description: This tutorial shows you how to create a very simple IEPD. Once you are comfortable with the process and output, you can move on to [more complex](/training/iepd-developer/) IEPDs.
+description: This tutorial shows you how to create a very simple IEPD. Once you are comfortable with the process and output, you can move on to more complex IEPDs.
 ---
 
 {{ page.description}}
@@ -49,7 +50,7 @@ The first item you need to determine is the single, main, focal point or purpose
 {:.example}
 > root element = `Person`. Assume the superhero is a human person.
 
-The content portion of the requirements analysis can be done however you prefer: document, spreadsheet, or UML diagram.  The kinds of information to be captured here include the following:
+The content portion of the requirements analysis can be done however you prefer: document, spreadsheet, or model diagram.  The kinds of information to capture include the following:
 
 - Data elements – These are the data fields for the message.  For each field, the following information may or will be needed:
   - Element name – This is the name of the field or tag.  Examples include First Name, Last Name, Street Address, and Phone Number.
@@ -88,13 +89,13 @@ The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset
 >
 >- SSGT search results are sorted by namespace (e.g., hs:, j:, nc:, and so on) unless there is a likely one from NIEM core (nc:) which will appear at the top of the list.
 >- SSGT search "Property" for "Person" shows `nc:Person` which is of `nc:PersonType`. Note that among the search results is `nc:PersonCapability` (this might be useful later).
->- Search "Property" for "Name" shows `nc:PersonName` which is of `nc:PersonNameType`. This looks like it should fit with our model.
+>- Search "Property" for "Name" shows `nc:PersonGivenName` and `nc:PersonSurName`: both are `nc:PersonNameTextType`. Those look like they should fit with our model.
 
 We have enough information from the preceding example, to begin [filling in a mapping document](/training/iepd-developer/map-and-model/). Make certain you have recorded your SSGT searches so you can begin to fill in the spreadsheet.
 
 **Source Data Columns**
 
-- Source Container Type - person, name
+- Source Container Type - Person
 - Source Element - Person, Name
 - Source Data Type - string
 - Source Element Definition - a superhero who is also a human being
@@ -102,7 +103,7 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 **NIEM Data Columns**
 
-- NIEM Element - nc:Person, nc:PersonName, nc:PersonFullName, nc:personNameInitialIndicator
+- NIEM Element - nc:Person, nc:PersonGivenName, nc:PersonSurName, nc:personNameInitialIndicator
 - NIEM Element Path - nc:Person/nc:PersonName/nc:PersonFullName/nc:personNameInitialIndicator
 - NIEM Type - nc:PersonType, nc:PersonNameType, nc:PersonNameTextType
 - NIEM Element Definition - A human being
