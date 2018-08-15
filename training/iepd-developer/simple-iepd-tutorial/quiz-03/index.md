@@ -15,4 +15,4 @@ description: Answer the following questions about this topic.
 
     [Answer](answer-02)
 
-[Return to the topic.](/training/iepd-developer/simple-iepd-tutorial/#map-and-model-knowledge-check)
+[Return to the topic.](/training/iepd-developer/simple-iepd-tutorial/#quiz-3-return)
