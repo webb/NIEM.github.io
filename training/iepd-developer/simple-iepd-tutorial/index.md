@@ -87,29 +87,31 @@ The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset
 
 {:.example}
 >
->- SSGT search results are sorted by namespace (e.g., hs:, j:, nc:, and so on) unless there is a likely one from NIEM core (nc:) which will appear at the top of the list.
->- SSGT search "Property" for "Person" shows `nc:Person` which is of `nc:PersonType`. Note that among the search results is `nc:PersonCapability` (this might be useful later).
->- Search "Property" for "Name" shows `nc:PersonGivenName` and `nc:PersonSurName`: both are `nc:PersonNameTextType`. Those look like they should fit with our model.
+>SSGT search results are sorted by namespace (e.g., **hs:**, **j:**, **nc:**, and so on). The results list can be very long. Take your time looking through it.
+>
+>1. A search of "Property" for "Person" shows `nc:Person` which is of `nc:PersonType`.
+>1. Browse through `nc:PersonType`, and you see it contains `nc:PersonName` which is of `nc:PersonNameType`.
+>1. Browse through `nc:PersonNameType`, and you see it contains `nc:PersonGivenName` and `nc:PersonSurName`. These look like they should fit with our model and are as far as we need to search for the time being.
 
 We have enough information from the preceding example, to begin [filling in a mapping document](/training/iepd-developer/map-and-model/). Make certain you have recorded your SSGT searches so you can begin to fill in the spreadsheet.
 
-**Source Data Columns**
+### Source Data Columns
 
 - Source Container Type - Person
-- Source Element - Person, Name
+- Source Element - Person
 - Source Data Type - string
 - Source Element Definition - a superhero who is also a human being
 - Source Element Cardinality - one person, one name
 
-**NIEM Data Columns**
+### NIEM Data Columns
 
-- NIEM Element - nc:Person, nc:PersonGivenName, nc:PersonSurName, nc:personNameInitialIndicator
-- NIEM Element Path - nc:Person/nc:PersonName/nc:PersonFullName/nc:personNameInitialIndicator
-- NIEM Type - nc:PersonType, nc:PersonNameType, nc:PersonNameTextType
+- NIEM Element - `nc:Person`
+- NIEM Element Path - `nc:Person/nc:PersonNameType/nc:PersonGivenName`; `nc:Person/nc:PersonNameType/nc:personSurName`; `nc:Person/nc:PersonType/nc:personName`
+- NIEM Type - `nc:PersonType`; `nc:PersonNameType`
 - NIEM Element Definition - A human being
-- NIEM Element Cardinality - 1:1 (at least one name, but no more than one name)
+- NIEM Element Cardinality - 1..1 (at least one, but no more than one)
 
-**Mapping Column**
+### Mapping Column
 
 - Mapping - Equivalent
 
@@ -119,11 +121,32 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 ---
 
-<!--
-### Build and Validate
+## Build and Validate
 
 You create a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 
+<!---
+After the mapping is completed, there will be a set of local components that map to NIEM and a set that does not.
+For the set that maps, add each of the NIEM components to a custom NIEM schema subset using the SSGT as described in the SSGT Tutorial.
+Save the subset to the base-xsd subfolder in your IEPD package.
+Make sure to keep the subset wantlist (the save file) so that changes can be made later on without having to rebuild the entire subset.
+
+For the set of local components that do not map to NIEM, add them to the IEPD by creating an extension schema:
+
+Create a new Schema file (.xsd) using your preferred editor.
+Copy the Schema header pattern into your schema.
+Add namespace prefixes and import statements for any schemas you will need to reference.
+Create NIEM-conformant components to represent your local requirements.
+Build new NIEM-conformant components – elements, attributes, types, code sets, associations, roles, metadata.
+Augment a NIEM data type to add local components to a NIEM type.
+[Extend] a NIEM data type to create a specialization.
+Create adapters to reuse components from an external standard that does not conform to NIEM.
+Review definitions to ensure that they fully capture the meaning of each component. Things that are obvious to the IEPD developer may not be so obvious to future IEPD implementers.
+Validate your extension schema using the NIEM Conformance Tool to check for any issues.
+When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
+--->
+
+<!---
 ### Assemble and Document
 
 You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file. You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
