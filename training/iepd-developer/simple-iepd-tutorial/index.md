@@ -115,6 +115,10 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 - Mapping - Equivalent
 
+### Simple IEPD Map Example
+
+![Simple IEPD Map](Simple-IEPD-Mapping-01.png "Simple IEPD Map")
+
 {:.quiz}
 > Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-3).
 <a name="quiz-3-return"/>
@@ -123,16 +127,11 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 ## Build and Validate
 
-You create a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
+You create and validate a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 
-<!---
-After the mapping is completed, there will be a set of local components that map to NIEM and a set that does not.
-For the set that maps, add each of the NIEM components to a custom NIEM schema subset using the SSGT as described in the SSGT Tutorial.
-Save the subset to the base-xsd subfolder in your IEPD package.
-Make sure to keep the subset wantlist (the save file) so that changes can be made later on without having to rebuild the entire subset.
+Obtain the documentation from the SSGT. This comprises much of your IEPD for the simple exchange, in particular the schema subset. For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These will become part of an extension schema that is included in an IEPD, and is discusse in another tutorial.
 
-For the set of local components that do not map to NIEM, add them to the IEPD by creating an extension schema:
-
+<!--
 Create a new Schema file (.xsd) using your preferred editor.
 Copy the Schema header pattern into your schema.
 Add namespace prefixes and import statements for any schemas you will need to reference.
@@ -144,9 +143,9 @@ Create adapters to reuse components from an external standard that does not conf
 Review definitions to ensure that they fully capture the meaning of each component. Things that are obvious to the IEPD developer may not be so obvious to future IEPD implementers.
 Validate your extension schema using the NIEM Conformance Tool to check for any issues.
 When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
---->
+-->
 
-<!---
+<!--
 ### Assemble and Document
 
 You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file. You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
