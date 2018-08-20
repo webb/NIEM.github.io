@@ -1,7 +1,7 @@
 ---
 title: IEPD Developer
 icon: fa-envelope-o
-description: An Information Exchange Package Documentation (IEPD) Developer designs, builds and validates the components (artifacts) of an Information Exchange Package (IEP). The process consists of a six-phase lifecycle.
+description: An Information Exchange Package Documentation (IEPD) Developer designs, builds and validates the components (artifacts) of an Information Exchange Package (IEP).
 links:
 - url: /training/iepd-developer/scenario-planning/
 - url: /training/iepd-developer/analyze-requirements/
@@ -14,6 +14,11 @@ links:
 
 {{ page.description}}
 
+You are here to learn what and why you need to develop IEP documentation (IEPD) and how to do it. The IEPD allows the sender and receiver to exchange information in a manner that both understand. The exchange is typically in the form of XML schema documents that define XML instance documents.
+
+The documentation development process consists of a six-phase lifecycle that begins with the phase known as [Scenario Planning](/reference/iepd/lifecycle/scenario-planning).
+
+<!--
 ## IEPD Lifecycle
 
 1. **[Scenario Planning](scenario-planning/ "Scenario Planning")**: During the Scenario Planning phase, you review background information related to your information exchange, assess resource impact, understand business context, and identify information exchange business scenarios.
@@ -22,11 +27,12 @@ links:
 4. **[Build and Validate](build-and-validate/ "Build and Validate")**: During the Build and Validate phase, you create a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 5. **[Assemble and Document](assemble-and-document/ "Assemble and Document")**: During the Assemble and Document Phase, you prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file. You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
 6. **[Publish and Implement](publish-and-implement/ "Publish and Implement")**: During the last phase, the Publish and Implement phase, you implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
-
-## IEPD Developer Resources
-
-[Reference](/reference/) has a comprehensive list of information resources for tools, specifications, and artifacts. In addition, there are some [older resources](https://www.niem.gov/techhub/iepd-resources) you can use for reference purposes.
+-->
 
 ## IEPD Tutorial
 
-- [Simple IEPD](/training/iepd-developer/simple-iepd-tutorial)
+- [Simple IEPD](/training/iepd-developer/simple-iepd-tutorial) - This tutorial shows you how to create a very simple IEPD. Once you are comfortable with the process and output, you can move on to the following more complex IEPDs.
+
+## IEPD Developer Resources
+
+There are a large number of tools and reference materials available to help you in your documentation effort. For example, one very useful tool is the [Schema Subset Generator (SSGT)](/reference/tools/ssgt/), which is mentioned in the tutorial.  You can see a comprehensive list of information resources for tools, specifications, and artifacts at the [Reference](/reference/ "Reference") page.
