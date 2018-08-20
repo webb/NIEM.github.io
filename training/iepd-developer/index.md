@@ -1,7 +1,7 @@
 ---
 title: IEPD Developer
 icon: fa-envelope-o
-description: An Information Exchange Package Documentation (IEPD) Developer designs, builds and validates the components (artifacts) of an Information Exchange Package (IEP). Theprocess consists of a six-phase lifecycle.
+description: An Information Exchange Package Documentation (IEPD) Developer designs, builds and validates the components (artifacts) of an Information Exchange Package (IEP). The process consists of a six-phase lifecycle.
 links:
 - url: /training/iepd-developer/scenario-planning/
 - url: /training/iepd-developer/analyze-requirements/
