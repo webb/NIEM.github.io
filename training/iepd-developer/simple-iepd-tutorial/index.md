@@ -2,7 +2,7 @@
 title: Simple IEPD Tutorial
 short: Simple IEPD Tutorial
 icon: fa-envelope-o
-description: This tutorial shows you how to create a very simple IEPD. Once you are comfortable with the process and output, you can move on to more complex IEPDs.
+description: This tutorial shows you how to create a very simple IEPD set. Once you are comfortable with the process and output, you can move on to more complex IEPDs.
 ---
 
 {{ page.description}}
@@ -13,27 +13,26 @@ You observe a person who displays superhuman powers (a superhero). You want to i
 
 ## Scenario Planning
 
-<!--
-You review background information related to your information exchange, assess resource impact, understand business context, and identify information exchange business scenarios.
-
-sources:
-IEPD Tutorials from /iepd-starter-kit/iepd-tutorials/
-Dropbox (GaTech)/NIEM-FA807514D0018-0018/training/2010-05-18-walmsley-creating-a-niem-2.1-iepd/2010-05-18-walmsley-creating-a-niem-2.1-iepd.pdf
--->
+Scenario Planning is the first step in the IEPD development process.
 
 You talk to personal and professional associates and decide the information should be distributed so that others may learn, or be able to add to the group's knowledge, about the superhero.
 
-Determine the information that would be useful to gather and the resources needed to obtain and distribute the information. You decide that acquiring and distributing the person's name and appearance is enough. Develop a [Use Case, Business Process, or Sequence](/training/iepd-developer/scenario-planning/) diagram to graphically show the actors and information flow for your scenario. A visual representation can be very useful especially if the scenario is complex.
+Determine the information that would be useful to gather and the resources needed to obtain and distribute the information. To help visualize the information flow and content, you can develop a [diagram](/training/iepd-developer/scenario-planning/ "Use Case, Business Process, or Sequence") to graphically show the actors and information flow for your scenario. A visual representation can be very useful especially if the scenario is complex.
 
-The NIEM data model is very large. It is highly likely that the type and format of the data you want to acquire and distribute is already defined. If not, then one of the several [NIEM Communities]({{ site.data.links.niem_communities }} "NIEM Communities") may have tackled a similar problem and developed an information exchange package (IEP) that comes close to meeting your needs. A search through their published resources can help.
+You decide that acquiring and distributing the person's name is enough.
+
+{:.note}
+>The NIEM data model is very large. It is highly likely that the type and format of the data you want to acquire and distribute is already defined. If not, then one of the several [NIEM Communities]({{ site.data.links.niem_communities }} "NIEM Communities") may have tackled a similar problem and developed an information exchange package (IEP) that comes close to meeting your needs. A search through their published resources can help.
 
 {:.example}
 >Scenario Information Acquisition and Flow
 >
->1. Witness sees Superhero display powers
->1. Witness obtains Superhero name
->1. Witness transmits information to Police
->1. Police transmit Superhero information to other Authorities
+>1. Witness sees a Superhero display powers.
+>1. Witness obtains the Superhero's name.
+>1. Witness distributes information to other parties.
+>
+>You decide the information flow looks like this (sequence diagram):
+>![Information Flow](Information-Flow-Diagram.png "Information Flow")
 
 {:.quiz}
 > Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-1).
@@ -42,6 +41,8 @@ The NIEM data model is very large. It is highly likely that the type and format 
 ---
 
 ## Analyze Requirements
+
+After Scenario Planning, you want to analyze the scenario's requirements for the next step in the IEPD development process.
 
 The information exchange scenario now needs to be broken down into finer detail to understand and document the business context and data requirements. There is no prescribed way to to do this, nor is the knowledge of NIEM or XML Schema required. The most important idea to keep in mind is that the subject matter experts capture the requirements and analysis with thorough detail.
 
@@ -78,7 +79,9 @@ The other requirements of the exchange (e.g., technical, security and privacy, p
 
 ## Map and Model Requirements
 
-You begin the creation of IEPD components for your exchange content model based on your information exchange requirements analysis.  A common way to start is to create a mapping document. This is typically a spreadsheet, which maps your local exchange data elements to the NIEM data model. You can [download a sample spreadsheet](/training/iepd-developer/map-and-model/assets/SampleEmptyMappingDocument.xlsx "Sample Mapping Document") and modify it to suit your requirements.
+After you have analyzed and determined your exchange requirements, you proceed to [map and model](/reference/iepd/lifecycle/map-and-model/) them for the next step in the IEPD development process.
+
+A common way begin the creation of IEPD components for your exchange is to create a mapping document. This is typically a spreadsheet, which maps your local exchange data elements to the NIEM data model. You can [download a sample spreadsheet](/training/iepd-developer/map-and-model/assets/SampleEmptyMappingDocument.xlsx "Sample Mapping Document") and modify it to suit your requirements.
 
 The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset Generation Tool (SSGT)") is a good tool to use to map your exchange to NIEM. If you are unfamiliar with the SSGT, refer to [Map and Model Training](/training/iepd-developer/map-and-model/ "Map and Model Training"), "What is a Mapping Document." The SSGT's advantage lies in that you can extract just what you need from NIEM, i.e., create a subset.
 
@@ -93,7 +96,7 @@ The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset
 >1. Browse through `nc:PersonType`, and you see it contains `nc:PersonName` which is of `nc:PersonNameType`.
 >1. Browse through `nc:PersonNameType`, and you see it contains `nc:PersonGivenName` and `nc:PersonSurName`. These look like they should fit with our model and are as far as we need to search for the time being.
 
-We have enough information from the preceding example, to begin [filling in a mapping document](/training/iepd-developer/map-and-model/). Make certain you have recorded your SSGT searches so you can begin to fill in the spreadsheet.
+We have enough information from the preceding example, to [fill in a mapping document](/training/iepd-developer/map-and-model/). Make certain you have your SSGT searches handy so you can fill in the spreadsheet.
 
 ### Source Data Columns
 
@@ -115,9 +118,21 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 - Mapping - Equivalent
 
-### Simple IEPD Map Example
+### Simple Mapping Example
 
-![Simple IEPD Map](Simple-IEPD-Mapping-01.png "Simple IEPD Map")
+Your mapping document should look like this.
+
+![Simple Map to NIEM](Simple-IEPD-Mapping-01.png "Simple Map to NIEM")
+
+### Generate Subset Schema
+
+For the final step in this phase, [use the SSGT](/training/iepd-developer/map-and-model/ "SSGT Documentation") to generate your new subset schema documentation:
+
+1. Click "Generate Documents."
+2. Under "Generate Subset Schema," click "Save Subset Schema to a file."
+3. Under "Generate Wantlist," click "Save current wantlist to a file."
+
+The Subset Schema and the Wantlist will form a substantial part of your IEPD.
 
 {:.quiz}
 > Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-3).
@@ -130,6 +145,9 @@ We have enough information from the preceding example, to begin [filling in a ma
 You create and validate a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 
 Obtain the documentation from the SSGT. This comprises much of your IEPD for the simple exchange, in particular the schema subset. For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These will become part of an extension schema that is included in an IEPD, and is discussed in another tutorial.
+
+{:.quiz}
+>Answer a few questions in a short quiz.
 
 <!--
 Create a new Schema file (.xsd) using your preferred editor.
