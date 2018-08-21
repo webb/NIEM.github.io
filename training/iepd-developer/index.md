@@ -14,9 +14,9 @@ links:
 
 {{ page.description}}
 
-You are here to learn what and why you need to develop IEP documentation (IEPD) and how to do it. The IEPD allows the sender and receiver to exchange information in a manner that both understand. The exchange is typically in the form of XML schema documents that define XML instance documents.
+The IEPD allows the sender and receiver to exchange information in a manner that both understand. The exchange is typically in the form of XML schema documents that define XML instance documents.
 
-The documentation development process consists of a six-phase lifecycle that begins with the phase known as [Scenario Planning](/reference/iepd/lifecycle/scenario-planning).
+You are here to learn what and why you need to develop IEPD and how to do it.
 
 <!--
 ## IEPD Lifecycle
@@ -31,8 +31,10 @@ The documentation development process consists of a six-phase lifecycle that beg
 
 ## IEPD Tutorial
 
-- [Simple IEPD](/training/iepd-developer/simple-iepd-tutorial) - This tutorial shows you how to create a very simple IEPD. Once you are comfortable with the process and output, you can move on to the following more complex IEPDs.
+The documentation development process consists of a [six-phase lifecycle](/reference/iepd/lifecycle/ "IEPD Lifecycle") that begins with the phase known as Scenario Planning as described in the Simple IEPD tutorial that follows.
 
-## IEPD Developer Resources
+- [Simple IEPD](/training/iepd-developer/simple-iepd-tutorial) - This tutorial shows you how to create a very simple IEPD set. Once you are comfortable with the process and output, you can move on to more complex IEPDs.
 
-There are a large number of tools and reference materials available to help you in your documentation effort. For example, one very useful tool is the [Schema Subset Generator (SSGT)](/reference/tools/ssgt/), which is mentioned in the tutorial.  You can see a comprehensive list of information resources for tools, specifications, and artifacts at the [Reference](/reference/ "Reference") page.
+### IEPD Developer Resources
+
+There are a large number of tools and reference materials available to help you in your documentation effort. For example, one very useful tool is the [Schema Subset Generator (SSGT)](/reference/tools/ssgt/ "SSGT"), which is mentioned in the tutorial.  You can see a comprehensive list of information resources for tools, specifications, and artifacts at the [Reference](/reference/ "Reference") page.

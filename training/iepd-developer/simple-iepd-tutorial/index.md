@@ -129,7 +129,7 @@ We have enough information from the preceding example, to begin [filling in a ma
 
 You create and validate a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 
-Obtain the documentation from the SSGT. This comprises much of your IEPD for the simple exchange, in particular the schema subset. For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These will become part of an extension schema that is included in an IEPD, and is discusse in another tutorial.
+Obtain the documentation from the SSGT. This comprises much of your IEPD for the simple exchange, in particular the schema subset. For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These will become part of an extension schema that is included in an IEPD, and is discussed in another tutorial.
 
 <!--
 Create a new Schema file (.xsd) using your preferred editor.
