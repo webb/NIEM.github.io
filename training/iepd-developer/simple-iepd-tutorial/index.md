@@ -144,11 +144,19 @@ The Subset Schema and the Wantlist will form a substantial part of your IEPD.
 
 You create and validate a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 
-Obtain the documentation from the SSGT. This comprises much of your IEPD for the simple exchange, in particular the schema subset. For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These will become part of an extension schema that is included in an IEPD, and is discussed in another tutorial.
+Obtain the documentation the SSGT created for you in [Map and Model](#map-and-model-requirements). This comprises much of your IEPD for the simple exchange, in particular the schema subset.
 
-{:.quiz}
->Answer a few questions in a short quiz.
+For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These would become part of an extension schema that is included in an IEPD, and is discussed in another tutorial.
 
+## Assemble and Document
+
+You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file (e.g., zip) according to the [recommended file-and-folder structure](/training/iepd-developer/assemble-and-document/#assemble-the-iepd).
+
+You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
+
+## Publish and Implement
+
+You implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
 <!--
 Create a new Schema file (.xsd) using your preferred editor.
 Copy the Schema header pattern into your schema.
@@ -156,19 +164,9 @@ Add namespace prefixes and import statements for any schemas you will need to re
 Create NIEM-conformant components to represent your local requirements.
 Build new NIEM-conformant components – elements, attributes, types, code sets, associations, roles, metadata.
 Augment a NIEM data type to add local components to a NIEM type.
-[Extend] a NIEM data type to create a specialization.
+[Extend] a NIEM data type to create a specialization (e.g., Person:SuperHero).
 Create adapters to reuse components from an external standard that does not conform to NIEM.
 Review definitions to ensure that they fully capture the meaning of each component. Things that are obvious to the IEPD developer may not be so obvious to future IEPD implementers.
 Validate your extension schema using the NIEM Conformance Tool to check for any issues.
 When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
--->
-
-<!--
-### Assemble and Document
-
-You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file. You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
-
-### Publish and Implement
-
-You implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
 -->
