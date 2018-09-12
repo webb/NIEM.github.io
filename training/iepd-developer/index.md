@@ -14,13 +14,13 @@ links:
 
 {{ page.description}}
 
-The [IEPD](/reference/iepd/ "IEPD") allows senders and receivers to exchange information in a manner that both understand. The exchange is typically in the form of XML schema documents that define XML instance documents, and other documents that describe, for example, the version history and contents of the documents.
+The [IEPD](../../reference/iepd/ "IEPD") allows senders and receivers to exchange information in a manner that both understand. The exchange is typically in the form of XML schema documents that define XML instance documents, and other documents that describe, for example, the version history and contents of the documents.
 
 You are here to learn what and why you need to develop IEPD and how to do it according to the IEPD Lifecycle.
 
 ## IEPD Lifecycle
 
-You develop the IEPD according to a six-phase lifecycle as shown graphically and listed in the following sections. The phases link to pages with detailed, introductory information about that phase. More lifecycle phase information can be found in their [reference section](/reference/iepd/lifecycle/ "Lifecycle Phase Reference").
+You develop the IEPD according to a six-phase lifecycle, as shown graphically and listed in the following sections. The phases link to pages with detailed, introductory information about that phase. More lifecycle phase information can be found in their [reference section](../../reference/iepd/lifecycle/ "Lifecycle Phase Reference").
 
 ![IEPD Lifecycle](iepdlifecycle01.png "IEPD Lifecycle")
 
@@ -37,12 +37,12 @@ Start with Scenario Planning and work your way through the list in order. See th
 
 The Simple IEPD tutorial takes you step-by-step through the creation process starting with the Scenario Planning phase. Future tutorials will reference and build from it.
 
-- [Simple IEPD](/training/iepd-developer/simple-iepd-tutorial) - This tutorial shows you how to create a very simple IEPD set. Once you are comfortable with the process and output, you can move on to more complex IEPDs.
+- [Simple IEPD](simple-iepd-tutorial) - This tutorial shows you how to create a very simple IEPD set. Once you are comfortable with the process and output, you can move on to more complex IEPDs.
 
 ### IEPD Developer Resources
 
-There are a large number of tools and reference materials available to help you in your documentation effort. You can see a comprehensive list of information resources at the [Reference](/reference/ "Reference") page. The sections you should find most immediately useful are the ones that cover the following:
+There are a large number of tools and reference materials available to help you in your documentation effort. You can see a comprehensive list of information resources at the [Reference](../../reference/ "Reference") page. The sections you should find most immediately useful are the ones that cover the following:
 
-- [Tools](/reference/tools/ "Tools") - use these to search NIEM to find the elements and relationships that match your information exchange requirements. Also, you can determine the NIEM conformance, within limits, of your schemas. For example, one very useful tool is the [Schema Subset Generator Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset Generator Tool (SSGT)"), which is mentioned in the tutorial.
-- [Artifacts](/reference/artifacts/ "Artifacts") - the components that you include in your IEPD. Some of them are required; others are not but are good to have in the package.
-- [Specifications](/reference/specifications/ "Specifications") - detailed information that establishes normative rules for NIEM (e.g., how the exchange package is constructed; the proper naming of documents and elements).
+- [Tools](../../reference/tools/ "Tools") - use these to search NIEM to find the elements and relationships that match your information exchange requirements. Also, you can determine the NIEM conformance, within limits, of your schemas. For example, one very useful tool is the [Schema Subset Generator Tool (SSGT)](../../reference/tools/ssgt/ "Schema Subset Generator Tool (SSGT)"), which is mentioned in the tutorial.
+- [Artifacts](../../reference/artifacts/ "Artifacts") - the components that you include in your IEPD. Some of them are required; others are not but are good to have in the package.
+- [Specifications](../../reference/specifications/ "Specifications") - detailed information that establishes normative rules for NIEM (e.g., how the exchange package is constructed; the proper naming of documents and elements).

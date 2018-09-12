@@ -17,7 +17,7 @@ Scenario Planning is the first step in the IEPD development process.
 
 You talk to personal and professional associates and decide the information should be distributed so that others may learn, or be able to add to the group's knowledge, about the superhero.
 
-Determine the information that would be useful to gather and the resources needed to obtain and distribute the information. To help visualize the information flow and content, you can develop a [diagram](/training/iepd-developer/scenario-planning/ "Use Case, Business Process, or Sequence") to graphically show the actors and information flow for your scenario. A visual representation can be very useful especially if the scenario is complex.
+Determine the information that would be useful to gather and the resources needed to obtain and distribute the information. To help visualize the information flow and content, you can develop a [diagram](../scenario-planning/ "Use Case, Business Process, or Sequence") to graphically show the actors and information flow for your scenario. A visual representation can be very useful especially if the scenario is complex.
 
 You decide that acquiring and distributing the person's name is enough.
 
@@ -34,12 +34,8 @@ You decide that acquiring and distributing the person's name is enough.
 >You decide the information flow looks like this (sequence diagram):
 >![Information Flow](Information-Flow-Diagram.png "Information Flow")
 
-<!--
-quiz questions taken from niem-300.pptx
--->
-
 {:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-1).
+> Answer a few questions in a [short quiz](quiz-1).
 <a name="quiz-1-return"/>
 
 ---
@@ -75,23 +71,19 @@ The content portion of the requirements analysis can be done however you prefer:
 
 The other requirements of the exchange (e.g., technical, security and privacy, performance, reporting) should be described in this stage as well.
 
-<!--
-quiz questions taken from niem-300.pptx
--->
-
 {:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-2).
+> Answer a few questions in a [short quiz](quiz-2).
 <a name="quiz-2-return"/>
 
 ---
 
 ## Map and Model Requirements
 
-After you have analyzed and determined your exchange requirements, you proceed to [map and model](/reference/iepd/lifecycle/map-and-model/) them for the next step in the IEPD development process.
+After you have analyzed and determined your exchange requirements, you proceed to [map and model](../../../reference/iepd/lifecycle/map-and-model/) them for the next step in the IEPD development process.
 
-A common way begin the creation of IEPD components for your exchange is to create a mapping document. This is typically a spreadsheet, which maps your local exchange data elements to the NIEM data model. You can [download a sample spreadsheet](/training/iepd-developer/map-and-model/assets/SampleEmptyMappingDocument.xlsx "Sample Mapping Document") and modify it to suit your requirements.
+A common way begin the creation of IEPD components for your exchange is to create a mapping document. This is typically a spreadsheet, which maps your local exchange data elements to the NIEM data model. You can [download a sample spreadsheet](../map-and-model/assets/SampleEmptyMappingDocument.xlsx "Sample Mapping Document") and modify it to suit your requirements.
 
-The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset Generation Tool (SSGT)") is a good tool to use to map your exchange to NIEM. If you are unfamiliar with the SSGT, refer to [Map and Model Training](/training/iepd-developer/map-and-model/ "Map and Model Training"), "What is a Mapping Document." The SSGT's advantage lies in that you can extract just what you need from NIEM, i.e., create a subset.
+The [Schema Subset Generation Tool (SSGT)](../../../reference/tools/ssgt "Schema Subset Generation Tool (SSGT)") is a good tool to use to map your exchange to NIEM. If you are unfamiliar with the SSGT, refer to [Map and Model Training](../map-and-model/ "Map and Model Training"), "What is a Mapping Document." The SSGT's advantage lies in that you can extract just what you need from NIEM, i.e., create a subset.
 
 {:.tip}
 >To find matches for your local components, use common words or acronyms in the search box.  Local names will be much less likely to return results.  A search term like "FirstName" or "First_Name" will return empty because these exact terms do not appear in any NIEM names or definitions; a search for "First Name" will return the matching component, `nc:PersonGivenName`, based on a match in the definition.
@@ -104,7 +96,7 @@ The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt/ "Schema Subset
 >1. Browse through `nc:PersonType`, and you see it contains `nc:PersonName` which is of `nc:PersonNameType`.
 >1. Browse through `nc:PersonNameType`, and you see it contains `nc:PersonGivenName` and `nc:PersonSurName`. These look like they should fit with our model and are as far as we need to search for the time being.
 
-We have enough information from the preceding example, to [fill in a mapping document](/training/iepd-developer/map-and-model/). Make certain you have your SSGT searches handy so you can fill in the spreadsheet.
+We have enough information from the preceding example, to [fill in a mapping document](../map-and-model). Make certain you have your SSGT searches handy so you can fill in the spreadsheet.
 
 ### Source Data Columns
 
@@ -134,82 +126,38 @@ Your mapping document should look like this.
 
 ### Generate Subset Schema
 
-For the final step in this phase, [use the SSGT](/training/iepd-developer/map-and-model/ "SSGT Documentation") to generate your new subset schema documentation:
+For the final step in this phase, [use the SSGT](../map-and-model/ "SSGT Documentation") to generate your new subset schema documentation:
 
 1. Click "Generate Documents."
 2. Under "Generate Subset Schema," click "Save Subset Schema to a file."
-3. Under "Generate Wantlist," click "Save current wantlist to a file." The wantlist contains all of the components added to the subset.
+3. Under "Generate Wantlist," click "Save current wantlist to a file."
 
 The Subset Schema and the Wantlist will form a substantial part of your IEPD.
 
-<!--
-quiz questions taken from niem-302.pptx
--->
-
 {:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-3).
+> Answer a few questions in a [short quiz](quiz-3).
 <a name="quiz-3-return"/>
 
 ---
 
 ## Build and Validate
 
-You create and validate a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange. Components in this phase also include other XML documents (e.g., Wantlist) generated from NIEM tools such as the SSGT.
+You create and validate a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange and validate them. Components in this phase also include other XML documents generated from NIEM tools (e.g., Wantlist).
 
 Obtain the documentation the SSGT created for you in [Map and Model](#map-and-model-requirements). This comprises much of your IEPD for the simple exchange, in particular the schema subset.
 
 For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These would become part of an extension schema that is included in an IEPD, and is discussed in another tutorial.
 
-### Wantlist Example
+## Assemble and Document
 
-Based on the NIEM component choices you made earlier, the SSGT produces a wantlist like the following. Note the presence of the element `nc:Person` and the types you associated with it.
+You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file (e.g., zip) according to the [recommended file-and-folder structure](../assemble-and-document/#assemble-the-iepd).
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<w:WantList w:release="4.1" w:product="NIEM" w:nillableDefault="true"
-  xmlns:w="http://niem.gov/niem/wantlist/2.2" xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
-  <w:Element w:name="nc:Person" w:isReference="false" w:nillable="false"/>
-  <w:Type w:name="nc:PersonNameType" w:isRequested="false">
-    <w:ElementInType w:name="nc:PersonGivenName" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="unbounded"/>
-    <w:ElementInType w:name="nc:PersonSurName" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="unbounded"/>
-  </w:Type>
-  <w:Type w:name="nc:PersonType" w:isRequested="false">
-    <w:ElementInType w:name="nc:PersonName" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="unbounded"/>
-  </w:Type>
-</w:WantList>
-```
+You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
 
-### Schema Instance Example
+## Publish and Implement
 
-There is no automated way to generate the schema documents you need beyond what the SSGT provides. The most straightforward approach is to copy an existing known good document and alter it to suit your exchange.
-
-With the mapping components handy, modify an instance schema document so that it looks like the following (with values added to `nc:PersonGivenName` and `nc:PersonSurName`).
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-  <nc:PersonName xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
-    <nc:PersonGivenName>Bruce</nc:PersonGivenName>
-    <nc:PersonSurName>Wayne</nc:PersonSurName>
-  </nc:PersonName>
-```
-
+You implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
 <!--
-quiz questions taken from niem-302.pptx
--->
-
-{:.quiz}
-> Answer a few questions in a [short quiz](/training/iepd-developer/simple-iepd-tutorial/quiz-4).
-<a name="quiz-4-return"/>
-
----
-<!--
-After the mapping is completed, there will be a set of local components that map to NIEM and a set that does not. For the set that maps, add each of the NIEM components to a custom NIEM schema subset using the SSGT as described in the SSGT Tutorial. Save the subset to the base-xsd subfolder in your IEPD package. Make sure to keep the subset wantlist (the save file) so that changes can be made later on without having to rebuild the entire subset.
-
-For the set of local components that do not map to NIEM, add them to the IEPD by creating an extension schema:
-
 Create a new Schema file (.xsd) using your preferred editor.
 Copy the Schema header pattern into your schema.
 Add namespace prefixes and import statements for any schemas you will need to reference.
@@ -222,18 +170,3 @@ Review definitions to ensure that they fully capture the meaning of each compone
 Validate your extension schema using the NIEM Conformance Tool to check for any issues.
 When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
 -->
-
-## Assemble and Document
-
-You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file (e.g., zip) according to the [recommended file-and-folder structure](/training/iepd-developer/assemble-and-document/#assemble-the-iepd).
-
-You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
-<!--
-quiz questions taken from niem-303.pptx
--->
-
----
-
-## Publish and Implement
-
-You implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
