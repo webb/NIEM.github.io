@@ -148,6 +148,43 @@ Obtain the documentation the SSGT created for you in [Map and Model](#map-and-mo
 
 For the purpose of this tutorial, the local exchange components all map to NIEM. In a more complex IEP, there will likely be components that do not map. These would become part of an extension schema that is included in an IEPD, and is discussed in another tutorial.
 
+### Schema Instance Example
+
+There is no automated way to generate the schema documents you need beyond what the SSGT provides. The most straightforward approach is to copy an existing known good document and alter it to suit your exchange.
+
+With the mapping components handy, modify an instance schema document so that it looks like the following (with values added to `nc:PersonGivenName` and `nc:PersonSurName`).
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+  <nc:PersonName xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
+    <nc:PersonGivenName>Bruce</nc:PersonGivenName>
+    <nc:PersonSurName>Wayne</nc:PersonSurName>
+  </nc:PersonName>
+```
+
+{:.quiz}
+> Answer a few questions in a [short quiz](quiz-4).
+<a name="quiz-4-return"/>
+
+---
+<!--
+After the mapping is completed, there will be a set of local components that map to NIEM and a set that does not. For the set that maps, add each of the NIEM components to a custom NIEM schema subset using the SSGT as described in the SSGT Tutorial. Save the subset to the base-xsd subfolder in your IEPD package. Make sure to keep the subset wantlist (the save file) so that changes can be made later on without having to rebuild the entire subset.
+
+For the set of local components that do not map to NIEM, add them to the IEPD by creating an extension schema:
+
+Create a new Schema file (.xsd) using your preferred editor.
+Copy the Schema header pattern into your schema.
+Add namespace prefixes and import statements for any schemas you will need to reference.
+Create NIEM-conformant components to represent your local requirements.
+Build new NIEM-conformant components – elements, attributes, types, code sets, associations, roles, metadata.
+Augment a NIEM data type to add local components to a NIEM type.
+[Extend] a NIEM data type to create a specialization (e.g., Person:SuperHero).
+Create adapters to reuse components from an external standard that does not conform to NIEM.
+Review definitions to ensure that they fully capture the meaning of each component. Things that are obvious to the IEPD developer may not be so obvious to future IEPD implementers.
+Validate your extension schema using the NIEM Conformance Tool to check for any issues.
+When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
+-->
+
 ## Assemble and Document
 
 You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file (e.g., zip) according to the [recommended file-and-folder structure](../assemble-and-document/#assemble-the-iepd).
