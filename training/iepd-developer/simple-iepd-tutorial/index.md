@@ -79,11 +79,11 @@ The other requirements of the exchange (e.g., technical, security and privacy, p
 
 ## Map and Model Requirements
 
-After you have analyzed and determined your exchange requirements, you proceed to [map and model](../../../reference/iepd/lifecycle/map-and-model/) them for the next step in the IEPD development process.
+After you have analyzed and determined your exchange requirements, you proceed to [map and model](/reference/iepd/lifecycle/map-and-model/) them for the next step in the IEPD development process.
 
 A common way begin the creation of IEPD components for your exchange is to create a mapping document. This is typically a spreadsheet, which maps your local exchange data elements to the NIEM data model. You can [download a sample spreadsheet](../map-and-model/assets/SampleEmptyMappingDocument.xlsx "Sample Mapping Document") and modify it to suit your requirements.
 
-The [Schema Subset Generation Tool (SSGT)](../../../reference/tools/ssgt "Schema Subset Generation Tool (SSGT)") is a good tool to use to map your exchange to NIEM. If you are unfamiliar with the SSGT, refer to [Map and Model Training](../map-and-model/ "Map and Model Training"), "What is a Mapping Document." The SSGT's advantage lies in that you can extract just what you need from NIEM, i.e., create a subset.
+The [Schema Subset Generation Tool (SSGT)](/reference/tools/ssgt "Schema Subset Generation Tool (SSGT)") is a good tool to use to map your exchange to NIEM. If you are unfamiliar with the SSGT, refer to [Map and Model Training](../map-and-model/ "Map and Model Training"), "What is a Mapping Document." The SSGT's advantage lies in that you can extract just what you need from NIEM, i.e., create a subset.
 
 {:.tip}
 >To find matches for your local components, use common words or acronyms in the search box.  Local names will be much less likely to return results.  A search term like "FirstName" or "First_Name" will return empty because these exact terms do not appear in any NIEM names or definitions; a search for "First Name" will return the matching component, `nc:PersonGivenName`, based on a match in the definition.
@@ -93,25 +93,25 @@ The [Schema Subset Generation Tool (SSGT)](../../../reference/tools/ssgt "Schema
 >SSGT search results are sorted by namespace (e.g., **hs:**, **j:**, **nc:**, and so on). The results list can be very long. Take your time looking through it.
 >
 >1. A search of "Property" for "Person" shows `nc:Person` which is of `nc:PersonType`.
->1. Browse through `nc:PersonType`, and you see it contains `nc:PersonName` which is of `nc:PersonNameType`.
->1. Browse through `nc:PersonNameType`, and you see it contains `nc:PersonGivenName` and `nc:PersonSurName`. These look like they should fit with our model and are as far as we need to search for the time being.
+>1. Browse through `nc:PersonType`, and you see it contains `nc:PersonName` which is of `nc:PersonNameTextType`.
+>1. Browse through `nc:PersonNameTextType`, and you see it contains `nc:PersonGivenName` and `nc:PersonSurName`. These look like they should fit with our model and complete our search for the time being.
 
-We have enough information from the preceding example, to [fill in a mapping document](../map-and-model). Make certain you have your SSGT searches handy so you can fill in the spreadsheet.
+We have enough information from the preceding example to [fill in a mapping document](../map-and-model). Make certain you have your SSGT searches handy so you can fill in the spreadsheet.
 
 ### Source Data Columns
 
 - Source Container Type - Person
-- Source Element - Person
+- Source Element - SuperHero; Given Name; Surname
 - Source Data Type - string
-- Source Element Definition - a superhero who is also a human being
-- Source Element Cardinality - one person, one name
+- Source Element Definition - a superhero who is also a human being; a superhero's name (first name); a superhero's name (family name)
+- Source Element Cardinality - one person; one name; one name
 
 ### NIEM Data Columns
 
-- NIEM Element - `nc:Person`
-- NIEM Element Path - `nc:Person/nc:PersonNameType/nc:PersonGivenName`; `nc:Person/nc:PersonNameType/nc:personSurName`; `nc:Person/nc:PersonType/nc:personName`
-- NIEM Type - `nc:PersonType`; `nc:PersonNameType`
-- NIEM Element Definition - A human being
+- NIEM Element - `nc:Person`; `nc:PersonGivenName`; `nc:PersonSurName`
+- NIEM Element Path - `nc:Person`; `nc:PersonGivenName`; `nc:PersonSurName`
+- NIEM Type - `nc:PersonType`; `nc:PersonNameTextType`; `nc:PersonNameTextType`
+- NIEM Element Definition - A human being.; A first name of a person.; A last name or family name of a person.
 - NIEM Element Cardinality - 1..1 (at least one, but no more than one)
 
 ### Mapping Column
@@ -156,10 +156,10 @@ With the mapping components handy, modify an instance schema document so that it
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-  <nc:PersonName xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
-    <nc:PersonGivenName>Bruce</nc:PersonGivenName>
-    <nc:PersonSurName>Wayne</nc:PersonSurName>
-  </nc:PersonName>
+<nc:PersonName xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
+  <nc:PersonGivenName>Bruce</nc:PersonGivenName>
+  <nc:PersonSurName>Wayne</nc:PersonSurName>
+</nc:PersonName>
 ```
 
 {:.quiz}
@@ -167,43 +167,78 @@ With the mapping components handy, modify an instance schema document so that it
 <a name="quiz-4-return"/>
 
 ---
-<!--
-After the mapping is completed, there will be a set of local components that map to NIEM and a set that does not. For the set that maps, add each of the NIEM components to a custom NIEM schema subset using the SSGT as described in the SSGT Tutorial. Save the subset to the base-xsd subfolder in your IEPD package. Make sure to keep the subset wantlist (the save file) so that changes can be made later on without having to rebuild the entire subset.
-
-For the set of local components that do not map to NIEM, add them to the IEPD by creating an extension schema:
-
-Create a new Schema file (.xsd) using your preferred editor.
-Copy the Schema header pattern into your schema.
-Add namespace prefixes and import statements for any schemas you will need to reference.
-Create NIEM-conformant components to represent your local requirements.
-Build new NIEM-conformant components – elements, attributes, types, code sets, associations, roles, metadata.
-Augment a NIEM data type to add local components to a NIEM type.
-[Extend] a NIEM data type to create a specialization (e.g., Person:SuperHero).
-Create adapters to reuse components from an external standard that does not conform to NIEM.
-Review definitions to ensure that they fully capture the meaning of each component. Things that are obvious to the IEPD developer may not be so obvious to future IEPD implementers.
-Validate your extension schema using the NIEM Conformance Tool to check for any issues.
-When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
--->
 
 ## Assemble and Document
 
 You prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file (e.g., zip) according to the [recommended file-and-folder structure](../assemble-and-document/#assemble-the-iepd).
 
-You then should perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
+{:.example}
+>The root directory name should be meaningful and include the NIEM version and a revision number.
+>
+>superhero-iepd-4.0-rev-02
+>- base-xsd
+>   - niem
+>      - niem-core/4.0
+>      - proxy/xsd/4.0
+>      - utility
+>         - appinfo/4.0
+>         - conformanceTargets/3.0
+>         - structures/4.0
+>      - wantlist.xml
+>      - xml-catalog.xml
+>- mpd-catalog.xml (must be in root directory)
+>- changelog.txt (.md, .htm, .pdf; must be in root directory)
+>- readme.txt (.md, .htm, .pdf; must be in root directory)
+>- iep-sample (contains sample xml instances; must be in root directory)
+>- conformance-assertion.txt (.md, .htm, .pdf; should be in root directory)
+>- documentation (miscellaneous, binaries)
+>- schematron (optional; should be in root directory)
+
+Additional artifacts are required in an IEPD. An mpd-catalog is required and must conform to the [mpd specification](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html). Other artifacts such as documentation, sample instances, and schematron rules will not be covered in this tutorial. Schematron rules are not required but can be used to ensure the IEPD is following required business rules.
+
+**IEPD Artifacts:**
+
+- **NIEM schema subset** (required)  – The output from the SSGT from the previous stage.
+
+- **[mpd-catalog](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.1)** (required) – A specially-formatted XML instance that contains metadata about the IEPD.
+   - Catalog metadata includes: 
+      - IEPD unique identification
+      - Conformance targets
+      - Basic information about the IEPD 
+      - Key artifacts and directory structure
+      - Relationships to other MPDs and their artifacts
+
+
+- **[changelog](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.3)** (required) – An artifact that describes the changes applied to the IEPD since its previous version. You may choose your own format for the changelog which can simply be the release date.
+
+- **[readme](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.4)** (required) – An informal documentation artifact that includes an initial description or instructional information. This artifact should describe the IEPD purpose, scope, business value, exchange information, typical senders/receivers, interactions, and references to other documentation.
+
+- **[iep-sample](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.6.3)** (required) – A sample xml instance that serves as a test for the IEPD schemas. The sample instance should contain realistic data and use as many data components and validity constraints as possible.
+
+- **[conformance-assertion](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.7)**  – An artifact that provides a declaration that an IEPD conforms to relevant NIEM specifications and associated rules, including [NIEM Conformance 3.0](https://reference.niem.gov/niem/specification/conformance/3.0/conformance-3.0.html), [NIEM Naming and Design Rules 4.0](https://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/niem-ndr-4.0.html), [NIEM Conformance Targets Attribute Specification 3.0](https://reference.niem.gov/niem/specification/conformance-targets-attribute/3.0/NIEM-CTAS-3.0-2014-07-31.html), and [NIEM MPD Specification 3.0.1](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html).
+
+- **[xml-catalog](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.5)** – An xml instance that describes mappings between external schema references and locally-cached equivalents. A basic xml-catalog will be generated with the subset and can be modified as necessary.
+
+- **[wantlist](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_6.1)** – An xml file that contains the elements and types from NIEM that will be included within the subset schema for the exchange. In other words, it describes what an exchange "wants" from the NIEM data model.
+
+You should then perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
+
+---
 
 ## Publish and Implement
 
-You implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
-<!--
-Create a new Schema file (.xsd) using your preferred editor.
-Copy the Schema header pattern into your schema.
-Add namespace prefixes and import statements for any schemas you will need to reference.
-Create NIEM-conformant components to represent your local requirements.
-Build new NIEM-conformant components – elements, attributes, types, code sets, associations, roles, metadata.
-Augment a NIEM data type to add local components to a NIEM type.
-[Extend] a NIEM data type to create a specialization (e.g., Person:SuperHero).
-Create adapters to reuse components from an external standard that does not conform to NIEM.
-Review definitions to ensure that they fully capture the meaning of each component. Things that are obvious to the IEPD developer may not be so obvious to future IEPD implementers.
-Validate your extension schema using the NIEM Conformance Tool to check for any issues.
-When finished, save the extension schema to the base-xsd/extension subfolder in your IEPD package.
--->
+Once all artifacts have been assembled, you can implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
+
+Publish an IEPD to all repositories that are relevant to the exchange. Many of the [NIEM Communities]({{ site.data.links.niem_communities }} "NIEM Communities") have IEPD repositories where you can search for a package that is suitable or adaptable to your exchange. You may be able to find a home for your exchange with one of them.
+
+You may also wish to publish your IEPD on a service such as [github](https://github.com) for other interested parties to obtain your exchange.
+
+---
+
+## Additional Resources
+
+- [Model Package Description Specification 3.0.1](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html)
+- [NIEM Naming and Design Rules 4.0](https://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/niem-ndr-4.0.html)
+- [Optional IEPD Artifacts](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_6)
+- [IEPD SuperHero Series](/reference/iepd/iepd-starter-kit/iepd-series/)
+- [NIEM Reusable XML Snippets](/reference/iepd/iepd-starter-kit/reusable-xml-snippets/)
