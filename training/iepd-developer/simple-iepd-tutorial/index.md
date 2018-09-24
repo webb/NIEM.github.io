@@ -194,13 +194,13 @@ You prepare and package all related files for the IEPD into a single, self‐con
 >- documentation (miscellaneous, binaries)
 >- schematron (optional; should be in root directory)
 
-Additional artifacts are required in an IEPD. An mpd-catalog is required and must conform to the [mpd specification](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html). Other artifacts such as documentation, sample instances, and schematron rules will not be covered in this tutorial. Schematron rules are not required but can be used to ensure the IEPD is following required business rules.
+Additional artifacts are required in an IEPD. An mpd-catalog is required and must conform to the [mpd specification]({{site.data.links.mpd_spec}}). Other artifacts such as documentation, sample instances, and schematron rules will not be covered in this tutorial. Schematron rules are not required but can be used to ensure the IEPD is following required business rules.
 
 **IEPD Artifacts:**
 
 - **NIEM schema subset** (required)  – The output from the SSGT from the previous stage.
 
-- **[mpd-catalog](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.1)** (required) – A specially-formatted XML instance that contains metadata about the IEPD.
+- **[mpd-catalog]({{site.data.links.mpd_spec}}#section_5.1)** (required) – A specially-formatted XML instance that contains metadata about the IEPD.
    - Catalog metadata includes: 
       - IEPD unique identification
       - Conformance targets
@@ -209,17 +209,17 @@ Additional artifacts are required in an IEPD. An mpd-catalog is required and mus
       - Relationships to other MPDs and their artifacts
 
 
-- **[changelog](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.3)** (required) – An artifact that describes the changes applied to the IEPD since its previous version. You may choose your own format for the changelog which can simply be the release date.
+- **[changelog]({{site.data.links.mpd_spec}}#section_5.3)** (required) – An artifact that describes the changes applied to the IEPD since its previous version. You may choose your own format for the changelog which can simply be the release date.
 
-- **[readme](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.4)** (required) – An informal documentation artifact that includes an initial description or instructional information. This artifact should describe the IEPD purpose, scope, business value, exchange information, typical senders/receivers, interactions, and references to other documentation.
+- **[readme]({{site.data.links.mpd_spec}}#section_5.4)** (required) – An informal documentation artifact that includes an initial description or instructional information. This artifact should describe the IEPD purpose, scope, business value, exchange information, typical senders/receivers, interactions, and references to other documentation.
 
-- **[iep-sample](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.6.3)** (required) – A sample xml instance that serves as a test for the IEPD schemas. The sample instance should contain realistic data and use as many data components and validity constraints as possible.
+- **[iep-sample]({{site.data.links.mpd_spec}}#section_5.6.3)** (required) – A sample xml instance that serves as a test for the IEPD schemas. The sample instance should contain realistic data and use as many data components and validity constraints as possible.
 
-- **[conformance-assertion](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.7)**  – An artifact that provides a declaration that an IEPD conforms to relevant NIEM specifications and associated rules, including [NIEM Conformance 3.0](https://reference.niem.gov/niem/specification/conformance/3.0/conformance-3.0.html), [NIEM Naming and Design Rules 4.0](https://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/niem-ndr-4.0.html), [NIEM Conformance Targets Attribute Specification 3.0](https://reference.niem.gov/niem/specification/conformance-targets-attribute/3.0/NIEM-CTAS-3.0-2014-07-31.html), and [NIEM MPD Specification 3.0.1](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html).
+- **[conformance-assertion]({{site.data.links.mpd_spec}}#section_5.7)**  – An artifact that provides a declaration that an IEPD conforms to relevant NIEM specifications and associated rules, including [NIEM Conformance 3.0]({{site.data.links.conformance}}), [NIEM Naming and Design Rules 4.0]({{site.data.links.ndr}}), [NIEM Conformance Targets Attribute Specification 3.0]({{site.data.links.conformance_targets}}), and [NIEM MPD Specification 3.0.1]({{site.data.links.mpd_spec}}).
 
-- **[xml-catalog](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_5.5)** – An xml instance that describes mappings between external schema references and locally-cached equivalents. A basic xml-catalog will be generated with the subset and can be modified as necessary.
+- **[xml-catalog]({{site.data.links.mpd_spec}}#section_5.5)** – An xml instance that describes mappings between external schema references and locally-cached equivalents. A basic xml-catalog will be generated with the subset and can be modified as necessary.
 
-- **[wantlist](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_6.1)** – An xml file that contains the elements and types from NIEM that will be included within the subset schema for the exchange. In other words, it describes what an exchange "wants" from the NIEM data model.
+- **[wantlist]({{site.data.links.mpd_spec}}#section_6.1)** – An xml file that contains the elements and types from NIEM that will be included within the subset schema for the exchange. In other words, it describes what an exchange "wants" from the NIEM data model.
 
 You should then perform a peer review to ensure artifact consistency within the IEPD and with other IEPDs.
 
@@ -237,8 +237,9 @@ You may also wish to publish your IEPD on a service such as [github](https://git
 
 ## Additional Resources
 
-- [Model Package Description Specification 3.0.1](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html)
-- [NIEM Naming and Design Rules 4.0](https://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/niem-ndr-4.0.html)
-- [Optional IEPD Artifacts](https://reference.niem.gov/niem/specification/model-package-description/3.0.1/model-package-description-3.0.1.html#section_6)
+- [NIEM Conformance 3.0]({{site.data.links.conformance}})
+- [Model Package Description Specification 3.0.1]({{site.data.links.mpd_spec}})
+- [NIEM Naming and Design Rules 4.0]({{site.data.links.ndr}})
+- [Optional IEPD Artifacts]({{site.data.links.mpd_spec}}#section_6)
 - [IEPD SuperHero Series](/reference/iepd/iepd-starter-kit/iepd-series/)
 - [NIEM Reusable XML Snippets](/reference/iepd/iepd-starter-kit/reusable-xml-snippets/)

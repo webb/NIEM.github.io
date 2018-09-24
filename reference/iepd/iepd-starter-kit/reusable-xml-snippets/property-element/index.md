@@ -61,14 +61,17 @@ short: Element Pattern
 
 ### Property Declaration
 	<xs:element name="{$Name}{$RepresentationTerm}" type="{$Type}" nillable="{$Nillable}">
-		<xs:annotation>
-	      <xs:documentation>{$OpeningPhrase} {$Definition}</xs:documentation>
-	    </xs:annotation>
+        <xs:annotation>
+          <xs:documentation>{$OpeningPhrase} {$Definition}</xs:documentation>
+        </xs:annotation>
 	</xs:element>
 
 ### Related NDR Rules
 *   [NDR Section 9.2.1 Element declaration](http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/NIEM-NDR-3.0-2014-07-31.html#section_9.2.1 "NDR Rule/ elements")
 
 ### Example
-
-*   [SuperHero Example](../examples/SuperHero0/base-xsd/extension/SuperHero-extension.xsd)
+    <xs:element name="SuperHero" type="nc:PersonType">
+        <xs:annotation>
+          <xs:documentation>A person with super human abilities generally used to help others.</xs:documentation>
+        </xs:annotation>
+    </xs:element>

@@ -48,7 +48,7 @@ short: Abstract and Substitution Pattern
       </tr>
       <tr>
           <td><code>{$Definition}</code></td>
-          <td>The <a href="/wiki/Data_definition" title="Data definition">data definition</a> of the property</td>
+          <td>The <a href="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/NIEM-NDR-3.0-2014-07-31.html#definition_data_definition" title="Data definition">data definition</a> of the property</td>
           <td>Required</td>
           <td><a href="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/niem-ndr-3.0.html#section_11.6.1" title="NDR Section 11.6.1 How to write component definitions">NDR Section 11.6.1 How to write component definitions</a><br>
             <a href="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/NIEM-NDR-3.0-2014-07-31.html#section_11.6.1.1" title="NDR Section 11.6.1.1 Data definition opening phrases">NDR Section 11.6.1.1 Data definition opening phrases</a> <br>

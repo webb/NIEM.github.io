@@ -37,7 +37,7 @@ title: Simple Type
 	    </tr>
 	    <tr>
 	        <td><code>{$Facets}</code></td>
-	        <td>Results of <a href="/wiki/Pattern/facets" title="Pattern/facets">Pattern/facets</a></td>
+	        <td>Results of <a href="../facets" title="Facet Pattern">Facet Pattern</a></td>
 	        <td>Required</td>
 	        <td></td>
 	    </tr>
