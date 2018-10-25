@@ -11,7 +11,7 @@ description: A description of IEPD-1.
 
 ## **NIEM Release Version:**        NIEM 4.1
 
-## **URI:**                         https://www.af.mil/acc/a5ji/iepd-1
+## **URI:**                         documentation/Developer-Network-IEPD-Series--SuperHero-master.zip
 
 ## **IEPD Posted Date:**            1/31/2018
 

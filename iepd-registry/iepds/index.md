@@ -18,5 +18,5 @@ For information about NIEM, please visit www.NIEM.gov. To post your IEPD to the 
 : Description of IEPD 2.
 ---
 [IEPD 3](iepd3)
-: Description of IEPD 2.
+: Description of IEPD 3.
 ---

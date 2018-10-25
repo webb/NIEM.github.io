@@ -10,7 +10,7 @@ links:
 - url: /reference/iepd/iepd-versions/
 ---
 
-Information Exchange Package Documenation (IEPD) is a collection of NIEM artifacts.
+Information Exchange Package Documentation (IEPD) is a collection of NIEM artifacts.
 They define and describe the context, content, semantics, and structure of one or more implementable
 information exchanges.
 
